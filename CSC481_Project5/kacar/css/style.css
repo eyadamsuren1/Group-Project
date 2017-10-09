@@ -2,7 +2,7 @@ body{
   font: 15px/1.5 Arial, Helvetica,sans-serif;
   padding:0;
   margin:0;
-  background-color:#f4f4f4;
+  background-color:#f1f1f1;
 }
 
 /* Global */
@@ -19,31 +19,34 @@ ul{
 
 .button_1{
   height:38px;
-  background:#4a20b5;
-  border:0;
-  padding-left: 20px;
-  padding-right:20px;
-  color:#ffffff;
+  background:#bcbcbc;
+  border-style: solid;
+  border-color: #444444;
+  padding-left: 30px;
+  padding-right:30px;
+  color:#000000;
   cursor: pointer;
-  border-radius: 10px;
-  margin: 15px;
+  border-radius: 5px;
+  margin: 5px;
 }
 .button_1:hover {
     opacity: 0.8;
-    color:#000000;
+    color:#ffffff;
 }
 
 /* Header **/
 header{
-  background:#afafaf;
+  background:#f1f1f1;
   color:#ffffff;
   padding-top:30px;
   min-height:70px;
-  border-bottom:#4a20b5 3px solid;
+  border-bottom-style: outset;
+  border-color: #000000;
+
 }
 
 header a{
-  color:#ffffff;
+  color:#000000;
   text-decoration:none;
   text-transform: uppercase;
   font-size:16px;
@@ -73,14 +76,15 @@ header .highlight {
   font-weight:bold;
 }
 .current a{
-  border-radius: 10px 10px 0 0;
-  background:#4a20b5;
+  background:#bcbcbc;
+  border-style: outset;
+  border-width: 2px;
   color: #000000;
   font-weight:bold;
-  padding: 10px 20px 20px 20px;
+  padding: 10px 30px 10px 30px;
 }
 header a:hover{
-  color:#cccccc;
+  color:#000000;
   font-weight:bold;
 }
 
@@ -176,8 +180,9 @@ ul#services li{
 footer{
   padding:20px;
   margin-top:20px;
-  color:#ffffff;
-  background-color:#f4f004;
+  color:#000000;
+  background-color:#bcbcbc;
+  border-top-style: groove;
   text-align: center;
 }
 
