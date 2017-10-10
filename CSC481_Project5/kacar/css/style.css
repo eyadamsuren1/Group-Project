@@ -147,7 +147,7 @@ header a:hover{
 }
 
 #boxes .box img{
-  width:90px;
+  width:150px;height:90px;
 }
 
 /* Sidebar */
