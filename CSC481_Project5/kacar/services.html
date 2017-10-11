@@ -1,19 +1,48 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Book-A-Car | Services</title>
+    <title>Book-A-Car | About</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="js/jquery_popup.js"></script>
   </head>
   <body>
     <header>
       <div class="container">
         <div id="branding">
-          <img src="./img/RentACarLogo.gif" width="70" height="70"/>
+         <img src="./img/RentACarLogo.gif" width="70" height="70"/>
         </div>
-        <form style="float:right">
-          <button type="submit" class="button_1">Log In</button>
-          <button type="submit" class="button_1">Sign Up</button>
-        </form>
+        <p id="sign_up">Sign Up</p>
+        <p id="log_in">Log In</p>
+
+        <div id="logindiv">
+          <form action="#" id="login">
+            <h4>LOGIN</h4>
+            <div class="select">
+                <select>
+                    <option>Select</option>
+                    <option>Booker</option>
+                    <option>Renter</option>
+                </select>
+              </div>
+            <input type="text" id="email_address" placeholder="Email">
+            <input type="text" id="password" placeholder="Password">
+            <input type="button" id="login_button" value="Login">
+            <input type="button" id="cancel" value="Cancel">
+          </form>
+        </div>
+
+        <div id="signupdiv">
+          <form action="#" id="signup">
+          <h4>SIGN UP</h4>
+            <input type="text" id="first_name" placeholder="First Name">
+            <input type="text" id="last_name" placeholder="Last Name">
+            <input type="text" id="email_address" placeholder="Email">
+            <input type="text" id="password" placeholder="Password">
+            <input type="button" id="sign_button" value="Sign up">
+            <input type="button" id="cancel" value="Cancel">
+          </form>
+        </div>
         <nav>
           <ul>
             <li><a href="index.html">Home</a></li>
