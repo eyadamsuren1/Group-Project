@@ -36,7 +36,7 @@ ul{
 
 /* Header **/
 header{
-  background:#f1f1f1;
+    background-color:#ccebff;
   color:#ffffff;
   padding-top:30px;
   min-height:70px;
@@ -183,7 +183,7 @@ footer{
   padding:20px;
   margin-top:20px;
   color:#000000;
-  background-color:#bcbcbc;
+  background-color:#afafaf;
   border-top-style: groove;
   text-align: center;
 }
