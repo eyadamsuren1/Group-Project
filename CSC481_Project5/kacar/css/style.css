@@ -2,7 +2,7 @@ body{
   font: 15px/1.5 Arial, Helvetica,sans-serif;
   padding:0;
   margin:0;
-  background-color:#ccebff;
+  background-color:#f1f1f1;
 }
 
 /* Global */
@@ -13,7 +13,7 @@ body{
 }
 
 ul{
-  margin-top:70px;
+  margin-top:5px;
   padding:0;
 }
 
@@ -37,7 +37,7 @@ ul{
 
 /* Header **/
 header{
-  background:#ccebff;
+  background:#f1f1f1;
   color:#ffffff;
   padding-top:30px;
   min-height:70px;
@@ -69,7 +69,7 @@ header #branding h1{
 
 header nav{
   float:left;
-  margin-top:40px;
+  margin-top:100px;
 }
 
 header .highlight {
@@ -98,7 +98,7 @@ header a:hover{
   color:#ffffff;
 }
 #showcase:hover{
-    border: 1px solid #777;
+  border: 1px solid #777;
   opacity: 0.75;
   color:#000000;
 }
@@ -128,29 +128,20 @@ header a:hover{
   float:right;
   margin-top:15px;
 }
-
+#search form {
+  margin: auto;
+  width: 75%;
+  padding: 7px;
+  margin-top:30px;
+  margin-bottom:30px;
+}
+#search input[type="search"]{
+  border: 1px solid #333;
+}
 #newsletter input[type="email"]{
   padding:4px;
   height:25px;
   width:250px;
-}
-
-/* Boxes */
-#boxes{
-  margin-top:20px;
-}
-
-#boxes .box{
-  float:left;
-  text-align: center;
-  width:30%;
-  padding:10px;
-  border-style:solid;
-  border-width: 1px;
-}
-#boxes .box img{
-  width:150px;
-  height:90px;
 }
 
 /* Sidebar */
@@ -183,10 +174,10 @@ ul#services li{
 
 footer{
   padding:20px;
-  margin-top:20px;
+  margin-top:30px;
   color:#000000;
   background-color:#bcbcbc;
-  border-top-style: groove;
+  border-top-style: solid;
   text-align: center;
 }
 
@@ -197,7 +188,6 @@ footer{
   header nav li,
   #newsletter h1,
   #newsletter form,
-  #boxes .box,
   article#main-col,
   aside#sidebar{
     float:none;
@@ -207,10 +197,6 @@ footer{
 
   header{
     padding-bottom:20px;
-  }
-
-  #showcase h1{
-    margin-top:40px;
   }
 
   #newsletter button, .quote button{
@@ -278,7 +264,8 @@ input[type="text"]:focus {
   left: 0px;
   height: 100%;
   width: 100%;
-  background: #000;
+  background: rgb(54, 25, 25); 
+  background: rgba(5, 5, 5, .85);
   display: none;
 }
 
@@ -287,6 +274,7 @@ input[type="text"]:focus {
   margin:0px;
   padding: 40px;
   background-color:white;
+  border-radius: 20px;
   font-family: 'Fauna One', serif;
   position: relative;
   left: 50%;
@@ -317,4 +305,54 @@ h4{
   font-size:35px;
   text-align:center;
   color:black;
+}
+textarea{
+  margin-top:5px;
+  height: 150px;
+  padding:5px;
+}
+table {
+  margin: auto;
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 65%;
+}
+td {
+  text-align: center;
+  width: 50%;
+  display: table-cell;
+}
+.teams {
+  float: left;
+  border: 1px solid #000000;
+}
+
+table img {
+    width: 100%;
+    height: auto;
+}
+.box_1, .box_2, .box_3, .box_4, .box_5, .box_6 {
+  position:relative;
+  border: 1px solid #ffffff;
+  border-radius: 100px;
+  overflow: hidden;
+}
+.box_1:hover, .box_2:hover, .box_3:hover, .box_4:hover, .box_5:hover, .box_6:hover {
+  border: 1px solid #000000;
+  opacity: 0.8;
+}
+.description{
+  position:absolute;
+  bottom:0px;
+  left:0px;
+  width:100%;
+  background-color:black;
+  color:white;
+  opacity:0.6;
+  filter:alpha(opacity=60);
+}
+.description_content{
+  padding:10px;
+  margin:0px;
+  font-size: 30px;
 }
