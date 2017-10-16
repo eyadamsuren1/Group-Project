@@ -149,7 +149,6 @@ aside#sidebar{
   float:right;
   width:30%;
   margin-top:10px;
-  border: solid 1px;
 }
 
 aside#sidebar .quote input, aside#sidebar .quote textarea{
