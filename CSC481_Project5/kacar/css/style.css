@@ -35,7 +35,7 @@ ul{
 }
 
 
-/* Header **/
+/* Header */
 header{
   background:#f1f1f1;
   color:#ffffff;
@@ -94,6 +94,7 @@ header a:hover{
   min-height:600px;
   background:url('../img/showcase.jpg') center center no-repeat;
   border: 1px solid #ccc;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   text-align:center;
   color:#ffffff;
 }
@@ -258,14 +259,15 @@ input[type="text"]:focus {
     color:#ffffff;
 }
 #signupdiv, #logindiv{
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: 0px;
   height: 100%;
   width: 100%;
-  background: rgb(54, 25, 25); 
+  background: rgb(54, 25, 25);
   background: rgba(5, 5, 5, .85);
   display: none;
+  z-index: 9999;
 }
 
 #signup, #login{
@@ -323,9 +325,10 @@ td {
 }
 .teams {
   float: left;
+}
+.teams th, .teams td {
   border: 1px solid #000000;
 }
-
 table img {
     width: 100%;
     height: auto;
@@ -340,6 +343,7 @@ table img {
   border: 1px solid #000000;
   opacity: 0.8;
 }
+/* Tag for each vehicle */
 .description{
   position:absolute;
   bottom:0px;
@@ -354,4 +358,41 @@ table img {
   padding:10px;
   margin:0px;
   font-size: 30px;
+  line-height: 1.4;
+}
+/* Image Review */
+.product-image-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    display: none;
+}
+.product-image-overlay .product-image-overlay-close {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 30px;
+    height: 30px;
+    line-height: 35px;
+    font-size: 20px;
+    color: #eee;
+    text-align: center;
+    cursor: pointer;
+}
+.product-image-overlay img {
+    width: auto;
+    max-width: 80%;
+    max-height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
