@@ -263,9 +263,10 @@ input[type="text"]:focus {
   left: 0px;
   height: 100%;
   width: 100%;
-  background: rgb(54, 25, 25); 
+  background: rgb(54, 25, 25);
   background: rgba(5, 5, 5, .85);
   display: none;
+  z-index: 9999;
 }
 
 #signup, #login{
