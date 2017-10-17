@@ -150,6 +150,10 @@ aside#sidebar{
   float:right;
   width:30%;
   margin-top:10px;
+/*
+  color:#ffffff;
+  background:#afafaf;
+*/
 }
 
 aside#sidebar .quote input, aside#sidebar .quote textarea{
