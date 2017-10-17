@@ -46,7 +46,7 @@ $(document).ready(function() {
                 }
         });
         /*https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal_img*/
-        $('body').append('<div class="product-image-overlay"><span class="product-image-overlay-close">x</span><img src="" /></div>');
+        $('body').append('<div class="product-image-overlay"><span class="product-image-overlay-close">X</span><img src="" /></div>');
         var productImage = $('img');
         var productOverlay = $('.product-image-overlay');
         var productOverlayImage = $('.product-image-overlay img');

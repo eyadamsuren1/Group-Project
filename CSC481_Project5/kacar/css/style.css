@@ -343,6 +343,7 @@ table img {
   border: 1px solid #000000;
   opacity: 0.8;
 }
+/* Tag for each vehicle */
 .description{
   position:absolute;
   bottom:0px;
@@ -373,12 +374,10 @@ table img {
 .product-image-overlay .product-image-overlay-close {
     display: block;
     position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 1px solid #eee;
+    top: 25px;
+    right: 25px;
+    width: 30px;
+    height: 30px;
     line-height: 35px;
     font-size: 20px;
     color: #eee;
