@@ -19,7 +19,7 @@
 	background-color: black;
 	display: none;
 }
-.photobox-fc-main-container: hover {
+.photobox-fc-main-container:hover {
 	cursor: pointer;
 }
 .photobox-main-container {
@@ -148,4 +148,14 @@ table, tr, td {
 	bottom: 15px;
 	right: 15px;
 	float: right;
+}
+.photobox {
+  position:relative;
+  border:1px solid #ffffff;
+  border-radius:100px;
+  overflow:hidden;
+}
+.photobox:hover {
+  border:1px solid #000000;
+  opacity:0.8;
 }
