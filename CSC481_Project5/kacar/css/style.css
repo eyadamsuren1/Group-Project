@@ -1,6 +1,6 @@
 @charset "UTF-8";
 #cssmenu {
-  padding: 0;
+  padding-top: 100px;
   margin: 0;
   border: 0;
   width: auto;
@@ -75,7 +75,7 @@
 }
 #cssmenu a {
   display: inline-block;
-  font-size: 20px;
+  font-size: 18px;
   padding: 0 30px;
   text-align: center;
   text-decoration: none;
@@ -214,9 +214,13 @@ body{
 }
 /* Global */
 .container {
-  width: 80%;
+  width: 100%;
   margin: auto;
   overflow: hidden;
+}
+.containers {
+  width: 85%;
+  margin: auto;
 }
 ul {
   margin-top: 5px;
@@ -246,6 +250,8 @@ header {
   min-height: 70px;
   border-bottom-style: outset;
   border-color: #000000;
+  width: 85%;
+  margin: auto;
 }
 header a {
   color: #000000;
@@ -274,15 +280,17 @@ header a:hover {
 }
 /* Showcase */
 #showcase {
-  min-height: 600px;
+  width: 85%;
+  margin: auto;
+  min-height: 500px;
   background: url('../img/showcase.jpg') center center no-repeat;
-  border: 1px solid #ccc;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   text-align: center;
   color: #ffffff;
+  border-bottom-style: outset;
+  border-color: #000000;
 }
 #showcase:hover {
-  border: 1px solid #777;
   opacity: 0.75;
   color: #000000;
 }
@@ -309,7 +317,7 @@ header a:hover {
 }
 #search form {
   margin: auto;
-  width: 75%;
+  width: 65%;
   padding: 7px;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -346,7 +354,7 @@ ul#services li {
   background: #e6e6e6;
 }
 footer {
-  padding: 20px;
+  padding: 10px;
   margin-top: 30px;
   color: #000000;
   background-color: #bcbcbc;

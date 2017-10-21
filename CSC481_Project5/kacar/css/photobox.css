@@ -149,12 +149,12 @@ table, tr, td {
 	text-align: center;
 }
 .photobox {
-  position:relative;
-  border:1px solid #ffffff;
-  border-radius:100px;
-  overflow:hidden;
+  position: relative;
+  border: 1px solid #ffffff;
+  border-radius: 75px;
+  overflow: hidden;
 }
 .photobox:hover {
-  border:1px solid #000000;
-  opacity:0.8;
+  border: 1px solid #000000;
+  opacity: 0.8;
 }
