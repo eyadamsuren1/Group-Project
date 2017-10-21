@@ -420,12 +420,14 @@ input[type="text"]:focus {
 #sign_up, #log_in{
   background: #bcbcbc;
   border: 1px solid #444444;
-  padding: 5px 30px;
+  padding: 5px 0;
   color: #000000;
   cursor: pointer;
   border-radius: 5px;
   margin: 5px;
   float: right;
+  width: 100px;
+  text-align: center;
 }
 #sign_up:hover, #log_in:hover {
     opacity: 0.8;
