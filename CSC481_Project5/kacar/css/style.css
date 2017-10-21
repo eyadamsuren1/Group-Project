@@ -229,8 +229,7 @@ ul {
 .button_1 {
   height: 38px;
   background: #bcbcbc;
-  border-style: solid;
-  border-color: #444444;
+  border: 1px solid #444444;
   padding-left: 30px;
   padding-right: 30px;
   color: #000000;
@@ -348,7 +347,7 @@ article#main-col {
 /* Services */
 ul#services li {
   list-style: none;
-  padding: 20px;
+  padding: 15px;
   border: #cccccc solid 1px;
   margin-bottom: 5px;
   background: #e6e6e6;
@@ -448,12 +447,12 @@ input[type="text"]:focus {
   margin: 0px;
   padding: 40px;
   background-color: white;
+  border-radius: 3px;
   font-family: 'Fauna One', serif;
   position: relative;
   left: 50%;
   top: 50%;
-  margin-left: -210px;
-  margin-top: -158px;
+  transform: translate(-50%, -50%);
   text-align: center;
 }
 .select {
