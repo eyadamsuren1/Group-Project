@@ -395,8 +395,7 @@ input {
 }
 input[type="button"] {
   background-color: #bcbcbc;
-  border-style: solid;
-  border-color: #444444;
+  border: 1px solid #444444;
   font-Weight: bold;
   font-size: 18px;
   width: 48%;
@@ -421,8 +420,7 @@ input[type="text"]:focus {
 }
 #sign_up, #log_in{
   background: #bcbcbc;
-  border-style: solid;
-  border-color: #444444;
+  border: 1px solid #444444;
   padding: 5px 30px;
   color: #000000;
   cursor: pointer;
@@ -450,13 +448,13 @@ input[type="text"]:focus {
   margin: 0px;
   padding: 40px;
   background-color: white;
-  border-radius: 20px;
   font-family: 'Fauna One', serif;
   position: relative;
   left: 50%;
   top: 50%;
   margin-left: -210px;
   margin-top: -158px;
+  text-align: center;
 }
 .select {
   font-size: 16px;
