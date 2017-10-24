@@ -319,7 +319,7 @@ header a:hover {
   width: 65%;
   padding: 7px;
   margin-top: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
 }
 #search input[type="search"] {
   border: 1px solid #333;
@@ -457,23 +457,6 @@ input[type="text"]:focus, input[type="password"]:focus {
   transform: translate(-50%, -50%);
   text-align: center;
 }
-.select {
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-.select select {
-  outline: none;
-  display: block;
-  padding: 5px;
-  border: 1px solid #DDD;
-  border-radius: 5px;
-  background: #fff;
-  color: #555;
-  line-height: normal;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
 h4 {
   margin-top: 0;
   margin-bottom: 15px; 
@@ -524,4 +507,40 @@ textarea {
   margin: 0px;
   font-size: 30px;
   line-height: 1.4;
+}
+/*Group Button*/
+.btn-group {
+  width: 65%;
+  background-color: #bcbcbc;
+  color: black;
+  font-size: 0.9vw;
+  text-align: center;
+  margin: auto;
+  border-radius: 5px;
+  border-collapse: separate;
+  border-spacing: 0px;
+  margin-bottom: 30px;
+}
+.btn-group td {
+  border: 1px solid #000000;
+}
+.btn-group td:hover {
+  background-color: #000000;
+  color: #777777;
+}
+.btn-group td:active {
+  background-color: #000000;
+  color: white;
+}
+table.btn-group tr:first-child td:first-child {
+  border-top-left-radius: 5px;
+}
+table.btn-group tr:first-child td:last-child {
+  border-top-right-radius: 5px;
+}
+table.btn-group tr:last-child td:first-child {
+  border-bottom-left-radius: 5px;
+}
+table.btn-group tr:last-child td:last-child {
+  border-bottom-right-radius: 5px;
 }
