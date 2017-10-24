@@ -402,7 +402,7 @@ input[type="button"] {
 input[type="button"]:hover {
   background: #08ff00;
 }
-input[type="text"] {
+input[type="text"], input[type="password"] {
   border: none;
   border-bottom: 2px solid #262626;
   outline: none;
@@ -414,22 +414,7 @@ input[type="text"] {
   box-sizing: border-box;
   margin-bottom: 20px;
 }
-input[type="text"]:focus {
-  border-bottom: 2px solid #f00;
-}
-input[type="password"] {
-  border: none;
-  border-bottom: 2px solid #262626;
-  outline: none;
-  height: 40px;
-  color: #262626;
-  background: transparent;
-  font-size: 16px;
-  padding-left: 20px;
-  box-sizing: border-box;
-  margin-bottom: 20px;
-}
-input[type="password"]:focus {
+input[type="text"]:focus, input[type="password"]:focus {
   border-bottom: 2px solid #f00;
 }
 #sign_up, #log_in{
