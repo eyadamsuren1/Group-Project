@@ -282,7 +282,7 @@ header a:hover {
   width: 85%;
   margin: auto;
   min-height: 500px;
-  background: url('../img/showcase.jpg') center center no-repeat;
+  background: url('../img/icons/showcase.jpg') center center no-repeat;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   text-align: center;
   color: #ffffff;
@@ -500,8 +500,9 @@ textarea {
 .teams {
   float: left;
 }
-.teams th, .teams td {
+.teams, .teams th, .teams td {
   border: 1px solid #000000;
+  border-collapse: collapse;
 }
 .main_table img {
   width: 100%;
