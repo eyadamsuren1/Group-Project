@@ -56,10 +56,7 @@ $(document).ready(function() {
         }           
     });
     $('.btn-group td').click(function(){
-        if($(this).hasClass('active')){
-            $(this).removeClass('active')
-        } else {
-            $(this).addClass('active')
-        }
-});
+        $('.btn-group td').removeClass('active').addClass('inactive');
+        $(this).removeClass('inactive').addClass('active');
+    });
 });
