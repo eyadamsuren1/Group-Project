@@ -524,23 +524,23 @@ textarea {
 .btn-group td {
   border: 1px solid #000000;
 }
+.btn-group tr:first-child td:first-child {
+  border-top-left-radius: 5px;
+}
+.btn-group tr:first-child td:last-child {
+  border-top-right-radius: 5px;
+}
+.btn-group tr:last-child td:first-child {
+  border-bottom-left-radius: 5px;
+}
+.btn-group tr:last-child td:last-child {
+  border-bottom-right-radius: 5px;
+}
 .btn-group td:hover {
   background-color: #000000;
   color: #777777;
 }
-.btn-group td:active {
+.btn-group td.active {
   background-color: #000000;
   color: white;
-}
-table.btn-group tr:first-child td:first-child {
-  border-top-left-radius: 5px;
-}
-table.btn-group tr:first-child td:last-child {
-  border-top-right-radius: 5px;
-}
-table.btn-group tr:last-child td:first-child {
-  border-bottom-left-radius: 5px;
-}
-table.btn-group tr:last-child td:last-child {
-  border-bottom-right-radius: 5px;
 }

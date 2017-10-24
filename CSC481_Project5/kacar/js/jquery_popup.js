@@ -52,7 +52,14 @@ $(document).ready(function() {
         imageClassName: 'photo',
             
         onImageShow: function() {
-            $(".photobox-image-content").html('<div style="font-size:16px;height:200px">'+$(this).attr("alt")+'</div>');
+            $(".photobox-image-content").html($(this).attr("alt"));
         }           
     });
+    $('.btn-group td').click(function(){
+        if($(this).hasClass('active')){
+            $(this).removeClass('active')
+        } else {
+            $(this).addClass('active')
+        }
+});
 });
