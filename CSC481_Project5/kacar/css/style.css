@@ -523,6 +523,7 @@ textarea {
 }
 .btn-group td {
   border: 1px solid #000000;
+  width: 33.33%;
 }
 .btn-group tr:first-child td:first-child {
   border-top-left-radius: 5px;
