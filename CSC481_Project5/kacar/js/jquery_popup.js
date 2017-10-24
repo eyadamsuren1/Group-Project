@@ -55,6 +55,7 @@ $(document).ready(function() {
             $(".photobox-image-content").html($(this).attr("alt"));
         }           
     });
+    // Click Activator
     $('.btn-group td').click(function(){
         $('.btn-group td').removeClass('active').addClass('inactive');
         $(this).removeClass('inactive').addClass('active');
