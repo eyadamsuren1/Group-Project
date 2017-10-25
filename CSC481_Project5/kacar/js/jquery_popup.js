@@ -60,4 +60,28 @@ $(document).ready(function() {
         $('.btn-group td').removeClass('active').addClass('inactive');
         $(this).removeClass('inactive').addClass('active');
     });
+    $(".show_1").on('click', function() {
+        $("#box_1").slideDown(2000);
+        $("#box_2").slideDown(2000);
+        $("#box_3").slideDown(2000);
+        $("#box_4").slideDown(2000);
+        $("#box_5").slideDown(2000);
+        $("#box_6").slideDown(2000);
+    });
+    $(".show_2").on('click', function() {
+        $("#box_1").slideDown(2000);
+        $("#box_2").slideDown(2000);
+        $("#box_5").slideDown(2000);
+        $("#box_6").slideUp(2000);
+        $("#box_3").slideUp(2000);
+        $("#box_4").slideUp(2000);
+    });
+    $(".show_3").on('click', function() {
+        $("#box_1").slideUp(2000);
+        $("#box_2").slideUp(2000);
+        $("#box_3").slideDown(2000);
+        $("#box_4").slideDown(2000);
+        $("#box_5").slideDown(2000);
+        $("#box_6").slideDown(2000);
+    });
 });
