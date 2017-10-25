@@ -506,7 +506,7 @@ textarea {
 .description_content {
   padding: 10px;
   margin: 0px;
-  font-size: 30px;
+  font-size: 1.75vw;
   line-height: 1.4;
 }
 /*Group Button*/
