@@ -205,6 +205,7 @@
 }
 .current a {
   font-weight: bold;
+  text-shadow: 2px 2px #bcbcbc;
 }
 body{
   font: 15px/1.5 Arial, Helvetica, sans-serif;
