@@ -13,7 +13,7 @@
   padding: 0;
 }
 #cssmenu ul {
-  position: relative;
+  position: static;
   z-index: 597;
   float: left;
 }
