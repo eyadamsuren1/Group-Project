@@ -120,6 +120,7 @@
 							'</div>',
 							'<div style="clear:both"></div>',
 						'</div>',
+						/*
 						'<div class="photobox-fc-main-container">',
 							'<div class="photobox-fc-header">',
 								'<div style="float:left">Dummy Header</div>',
@@ -142,6 +143,7 @@
 								'</table>',
 							'</div>',
 						'</div>',
+						*/
 						'<div class="photobox-overlay"></div>',
 						'<div style="clear:both"></div>'];
 			$("body").append(html.join(""));

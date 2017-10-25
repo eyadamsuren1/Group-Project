@@ -8,6 +8,7 @@
 	right: 0px;
 	bottom: 0px;
 }
+/*
 .photobox-fc-main-container {
 	margin: auto;
 	position: fixed;
@@ -22,6 +23,7 @@
 .photobox-fc-main-container:hover {
 	cursor: pointer;
 }
+*/
 .photobox-main-container {
 	margin: auto;
 	display: none;
@@ -74,9 +76,6 @@
 .photobox-image-stage-overlay {
 	display: none;
 }
-.photobox-fc-close-btn:hover {
-	background-color: #777;
-}
 .photobox-main-image-table {
 	height: 100%;
 	width: 100%;
@@ -87,6 +86,7 @@
 	color: black;
 	overflow: hidden;
 }
+/*
 .photobox-fc-header {
 	position: fixed;
 	left: 0px;
@@ -100,6 +100,10 @@
 	padding: 2px 10px;
 	text-decoration: none;
 }
+.photobox-fc-close-btn:hover {
+	background-color: #777;
+}
+*/
 .photobox-overlay {
 	display: none;
 }
@@ -121,6 +125,7 @@
 	height: 48px;
 	width: 48px;
 }
+/*
 .fc-left-arrow a {
 	background-image: url(../img/icons/Arrows-LWhite-icon.png);
 	float: left;
@@ -138,6 +143,7 @@
 	height: 48px;
 	width: 48px;
 }
+*/
 table, tr, td {
 	border: none;
 	padding: 0px;
