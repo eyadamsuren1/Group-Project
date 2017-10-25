@@ -84,4 +84,10 @@ $(document).ready(function() {
         $("#box_5").slideDown(2000);
         $("#box_6").slideDown(2000);
     });
+	$('.myLink').click(function () {
+	    $('html, body').animate({
+	        scrollTop: $(document).height()
+	    }, 'slow');
+	    return false;
+	});
 });
