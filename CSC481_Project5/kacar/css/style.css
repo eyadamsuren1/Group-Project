@@ -278,6 +278,19 @@ header a:hover {
   color: #000000;
   font-weight: bold;
 }
+.logo_name {
+  margin-left: 5px;
+  margin-top: 7.5px;
+  float: left;
+  color: black;
+  font: bold 50px "Times New Roman", Times, serif;
+  background-color: #565656;
+  color: transparent;
+  text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+}
 /* Showcase */
 #showcase {
   width: 85%;
@@ -418,7 +431,7 @@ input[type="text"], input[type="password"] {
 input[type="text"]:focus, input[type="password"]:focus {
   border-bottom: 2px solid #f00;
 }
-#sign_up, #log_in{
+#sign_up, #log_in, #sign_out, #account_info {
   background: #bcbcbc;
   border: 1px solid #444444;
   padding: 5px 0;
@@ -430,7 +443,7 @@ input[type="text"]:focus, input[type="password"]:focus {
   width: 100px;
   text-align: center;
 }
-#sign_up:hover, #log_in:hover {
+#sign_up:hover, #log_in:hover, #sign_out:hover, #account_info:hover {
     opacity: 0.8;
     color: #ffffff;
 }
@@ -545,4 +558,30 @@ textarea {
 .btn-group td.active {
   background-color: #000000;
   color: white;
+}
+/*Account Information*/
+#accountdiv{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background: rgb(54, 25, 25);
+  background: rgba(5, 5, 5, .85);
+  display: none;
+  z-index: 9999;
+}
+#account {
+  width: 700px;
+  height: 700px;
+  margin: 0px;
+  padding: 40px;
+  background-color: white;
+  border-radius: 3px;
+  font-family: 'Fauna One', serif;
+  position: relative;
+  color: black;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
