@@ -573,7 +573,7 @@ textarea {
 }
 #account {
   width: 700px;
-  height: 700px;
+  height: auto;
   margin: 0px;
   padding: 40px;
   background-color: white;
