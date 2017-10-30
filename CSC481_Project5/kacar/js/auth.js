@@ -16,9 +16,17 @@ function login()
 			},
 	
 			success: function(userData) {
-				alert("Success");
-				console.log(userData);
-				//setCookie("userData", userData);
+                if(userData == 'null')
+                {
+                    alert("Credentials Incorrect. Try Again");
+                }else{
+                    alert("Success");
+                    console.log(userData);
+                    setCookie("userData", userData);
+                    //delete_cookie("userData");
+                    //console.log(getCookie("userData"));
+                }
+				
 			}
 		})
 	}

@@ -1,9 +1,10 @@
 <?php  
 ///test/demo_form.php?name1=value1&name2=value2
+//echo 'hello';
 if(isset($_POST["email"]) && isset($_POST['password']))
 {
-	echo $_POST['email'];
-	echo $_POST['password'];
+	//echo $_POST['email'];
+	//echo $_POST['password'];
 	$servername = "localhost";
 	$username = "root";
 	$password = "root";
@@ -44,7 +45,8 @@ if(isset($_POST["email"]) && isset($_POST['password']))
 	
 	
 	//$sql = "SELECT * FROM Kacar.user;";
-	$sql = "SELECT * FROM Kacar.user INNER JOIN Kacar.Vehicles ON user.userid = Vehicles.ownerid;";
+	$sql = "SELECT * FROM Kacar.user INNER JOIN Kacar.Vehicles ON user.userid = Vehicles.ownerid AND user.email ='" . $_POST['email'] . "' AND user.password = '" . $_POST['password'] . "';";
+	//$sql = "SELECT * FROM Kacar.user INNER JOIN Kacar.Vehicles ON user.userid = Vehicles.ownerid;";
 	$result = $conn->query($sql);
 	//$user->classrooms = $result;
 	if($result->num_rows > 0)
@@ -92,12 +94,19 @@ if(isset($_POST["email"]) && isset($_POST['password']))
 	
 	$user->vehicles = $vehicleList;
 	$myJSON = json_encode($user);
-	echo $myJSON;
+	
+	if($user->userid == "")
+	{
+		echo 'null';
+	}else{
+		echo $myJSON;
+	}
+	
 
 }
 else
 {
-	echo "";
+	echo 'null';
 }
 
 			
