@@ -12,6 +12,8 @@
     <script src="./js/photobox.js"></script>
     <link rel="stylesheet" href="./css/style.css">
     <script src="js/jquery_popup.js"></script>
+    <script src="js/auth.js"></script>;
+    
   </head>
   <body>
     <header>
@@ -22,11 +24,11 @@
         <p id="sign_up">Sign Up</p>
         <p id="log_in">Log In</p>
         <div id="logindiv">
-          <form action="#" id="login">
+          <form id="login">
             <h4>LOGIN</h4>
             <input type="text" id="email_address" placeholder="Email">
             <input type="password" id="password" placeholder="Password">
-            <input type="button" id="login_button" value="Login">
+            <input type="button" id="login_button" value="Login" onclick = "login()">
             <input type="button" id="cancel" value="Cancel">
           </form>
         </div>

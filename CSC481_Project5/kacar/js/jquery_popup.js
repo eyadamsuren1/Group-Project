@@ -34,6 +34,7 @@ $(document).ready(function() {
     $("#login #cancel").click(function() {
         $(this).parent().parent().hide();
     });
+    /*
     $("#login_button").click(function() {
         var name = $("#email_address").val();
         var password = $("#password").val();
@@ -43,12 +44,14 @@ $(document).ready(function() {
             $("#logindiv").css("display", "none");
         }
     });
+    */
     $("#account_info").click(function() {
         $("#accountdiv").css("display", "block");
     });
     $("#account #cancel").click(function() {
         $(this).parent().parent().hide();
     });
+    /*
     $("#login_button").click(function() {
         var name = $("#email_address").val();
         var password = $("#password").val();
@@ -58,6 +61,7 @@ $(document).ready(function() {
             $("#accountdiv").css("display", "none");
         }
     });
+    */
     $(".photobox img").PhotoBox({
         rightWidth: 360,
         leftBgColor: "black",

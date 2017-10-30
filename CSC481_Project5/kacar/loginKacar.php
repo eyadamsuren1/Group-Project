@@ -1,11 +1,9 @@
 <?php  
 ///test/demo_form.php?name1=value1&name2=value2
-echo 'hello';
-if(isset($_POST["fName"]))
+if(isset($_POST["email"]) && isset($_POST['password']))
 {
-echo $_POST['fName'];
-}
-
+	echo $_POST['email'];
+	echo $_POST['password'];
 	$servername = "localhost";
 	$username = "root";
 	$password = "root";
@@ -95,5 +93,12 @@ echo $_POST['fName'];
 	$user->vehicles = $vehicleList;
 	$myJSON = json_encode($user);
 	echo $myJSON;
-		
+
+}
+else
+{
+	echo "";
+}
+
+			
 ?>
