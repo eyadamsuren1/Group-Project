@@ -9,7 +9,7 @@ function login()
 	} else {
 		$.ajax({
 			type: "POST",
-			url: "loginKacar.php",
+			url: "./PHP/loginKacar.php",
 			data: {
 				"email" : email,
 				"password" : password
