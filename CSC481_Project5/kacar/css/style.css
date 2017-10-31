@@ -585,3 +585,7 @@ textarea {
   top: 50%;
   transform: translate(-50%, -50%);
 }
+.editable input {
+  display:block;
+  width:auto;
+}
