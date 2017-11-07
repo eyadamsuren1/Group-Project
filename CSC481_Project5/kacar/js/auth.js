@@ -52,8 +52,11 @@ function successLogin()
 
 function signOut()
 {
+    var json = getCookie("userData");
+    obj = JSON.parse(json);
+    alert("Goodbye " + obj.firstName);
     delete_cookie("userData");
-    alert("Signed Out");
+    
     window.location.href = "http://127.0.0.1/BookACar/index.html";
 
 }
