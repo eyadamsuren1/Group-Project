@@ -13,23 +13,24 @@
     <script src="../js/photobox.js"></script>
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/jquery_popup.js"></script>
+    <script src="../js/auth.js"></script>;
   </head>
-  <body>
+  <body onload="successLogin()">
     <header>
       <div class="container">
         <div id="branding">
           <img src="../img/icons/RentACarLogo.gif" width="70" height="70"/>
         </div>
-        <p id="sign_out">Sign Out</p>
-        <p id="account_info">Account</p>
+        <p id="sign_out" onClick="signOut()">Sign Out</p>
+        <p id="account_info" onc>Account</p>
         <div id="accountdiv">
           <form action="#" id="account">
             <h4>Account Information</h4>
-            <p>First Name:<p class="editable">John</p></p>
-            <p>Last Name:<p class="editable"> John</p></p>
-            <p class="editable">Email Address: John</p>
-            <p class="editable">Phone number: 888-888-8888</p>
-            <p class="editable">Address: 123 6th St. Melbourne, FL 32904</p>
+            <p><b>First Name:</b><p id = "firstNameAccount" class="editable"></p></p>
+            <p><b>Last Name</b><p id = "lastNameAccount" class="editable"></p></p>
+            <p><b>Email Address:</b><p id="emailAccount" class="editable"></p></p>
+            <p><b>Phone Number:</b><p id="phoneNumberAccount" class="editable"></p></p>
+            <p><b>Address:</b><p id = "addressAccount" class="editable"></p></p>
             <input type="button" id="cancel" value="Cancel">
           </form>
         </div>

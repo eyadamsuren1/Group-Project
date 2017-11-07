@@ -23,6 +23,7 @@ function login()
                     alert("Success");
                     console.log(userData);
                     setCookie("userData", userData);
+                    window.location.href = "http://127.0.0.1/BookACar/user/user_index.html";
                     //delete_cookie("userData");
                     //console.log(getCookie("userData"));
                 }
@@ -33,6 +34,31 @@ function login()
 
 	
 }
+
+function successLogin()
+{
+    
+    var json = getCookie("userData");
+    console.log(json);
+    obj = JSON.parse(json);
+    document.getElementById("firstNameAccount").innerHTML = obj.firstName;
+    document.getElementById("lastNameAccount").innerHTML = obj.lastName;
+    document.getElementById("emailAccount").innerHTML = obj.email;
+    //document.getElementById("firstNameAccount").innerHTML = obj.firstName;
+    alert("Welcome " + obj.firstName);
+
+
+}
+
+function signOut()
+{
+    delete_cookie("userData");
+    alert("Signed Out");
+    window.location.href = "http://127.0.0.1/BookACar/index.html";
+
+}
+
+
 
 function setCookie(cname, cvalue) {
     document.cookie = cname + "=" + cvalue + ";";
