@@ -3,7 +3,7 @@ function login() {
 	var password = document.getElementById("password").value;
 
 	if(email == "" || password == "") {
-        alert("Please Enter Credentials");
+        alert("Please Fill Out The Form Completely!");
 	} else {
         $.ajax({
 			type: "POST",
@@ -15,7 +15,7 @@ function login() {
 			success: function(userData) {
                 if(userData == 'null')
                 {
-                    alert("Credentials Incorrect. Try Again");
+                    alert("Your Email or Password is incorrect. Try Again!");
                 } else {
                     alert("Success");
                     console.log(userData);
@@ -71,5 +71,5 @@ function checkCookie() {
     }
 }
 var delete_cookie = function(name) {
-    document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 };
