@@ -1,25 +1,22 @@
-function login()
-{
-	var email = document.getElementById("email_address").value;
+function login() {
+    var email = document.getElementById("email_address").value;
 	var password = document.getElementById("password").value;
 
-	if(email == "" || password == "")
-	{
-		alert("Please Enter Credentials");
+	if(email == "" || password == "") {
+        alert("Please Enter Credentials");
 	} else {
-		$.ajax({
+        $.ajax({
 			type: "POST",
 			url: "./PHP/loginKacar.php",
 			data: {
 				"email" : email,
 				"password" : password
 			},
-	
 			success: function(userData) {
                 if(userData == 'null')
                 {
                     alert("Credentials Incorrect. Try Again");
-                }else{
+                } else {
                     alert("Success");
                     console.log(userData);
                     setCookie("userData", userData);
@@ -27,46 +24,29 @@ function login()
                     //delete_cookie("userData");
                     //console.log(getCookie("userData"));
                 }
-				
 			}
-		})
+		});
 	}
-
-	
 }
-
-function successLogin()
-{
-    
+function successLogin() {
     var json = getCookie("userData");
     console.log(json);
     obj = JSON.parse(json);
     document.getElementById("firstNameAccount").innerHTML = obj.firstName;
     document.getElementById("lastNameAccount").innerHTML = obj.lastName;
     document.getElementById("emailAccount").innerHTML = obj.email;
-    //document.getElementById("firstNameAccount").innerHTML = obj.firstName;
     alert("Welcome " + obj.firstName);
-
-
 }
-
-function signOut()
-{
+function signOut() {
     var json = getCookie("userData");
     obj = JSON.parse(json);
     alert("Goodbye " + obj.firstName);
     delete_cookie("userData");
-    
     window.location.href = "http://127.0.0.1/BookACar/index.html";
-
 }
-
-
-
 function setCookie(cname, cvalue) {
     document.cookie = cname + "=" + cvalue + ";";
 }
-
 function getCookie(cname) {
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
@@ -82,7 +62,6 @@ function getCookie(cname) {
     }
     return "";
 }
-
 function checkCookie() {
     var username = getCookie("userData");
     if (username != "") {
@@ -91,7 +70,6 @@ function checkCookie() {
         
     }
 }
-
 var delete_cookie = function(name) {
     document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 };
