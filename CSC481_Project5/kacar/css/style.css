@@ -473,8 +473,8 @@ input[type="text"]:focus, input[type="password"]:focus {
 }
 h4 {
   margin-top: 0;
-  margin-bottom: 15px; 
-  font-size: 35px;
+  margin-bottom: 10px; 
+  font-size: 25px;
   text-align: center;
   color: black;
 }
@@ -635,7 +635,7 @@ textarea {
 */
 /*----- Content of Tabs -----*/
 .tab-content {
-  padding: 25px;
+  padding: 15px 25px 25px 25px;
 }
 .tab {
   display: none;
@@ -674,5 +674,5 @@ textarea {
 }
 .panel_1_button, .panel_2_button, .close_button {
   margin-top: 10px; 
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
