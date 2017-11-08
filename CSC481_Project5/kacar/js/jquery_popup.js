@@ -34,6 +34,22 @@ $(document).ready(function() {
     $("#login #cancel").click(function() {
         $(this).parent().parent().hide();
     });
+    $('.tabs .tab-links li').on('click', function() {
+        var $panel = $(this).closest('.tabs');
+        $panel.find('.tab-links li.active').removeClass('active');
+        $(this).addClass('active');
+        //figure out which panel to show
+        var panelToShow = $(this).attr('rel');
+        //hide current panel
+        $panel.find('.tab.active').show(300, showNextPanel);
+        //show next panel
+        function showNextPanel() {
+            $(this).removeClass('active');
+            $('#'+panelToShow).hide(300, function() {
+                $(this).addClass('active');
+            });
+        }
+    });
     /*
     $("#login_button").click(function() {
         var name = $("#email_address").val();
@@ -48,7 +64,7 @@ $(document).ready(function() {
     $("#account_info").click(function() {
         $("#accountdiv").css("display", "block");
     });
-    $("#account #cancel").click(function() {
+    $("#panel_1 #cancel").click(function() {
         $(this).parent().parent().hide();
     });
     /*
