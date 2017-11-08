@@ -16,19 +16,45 @@
         <div id="branding">
          <img src="../img/icons/RentACarLogo.gif" width="70" height="70"/>
         </div>
-        <p id="sign_out">Sign Out</p>
+        <p id="sign_out" onClick="signOut()">Sign Out</p>
         <p id="account_info">Account</p>
+
         <div id="accountdiv">
-          <form action="#" id="account">
-            <h4>Account Information</h4>
-            <p><b>First Name: </b><p id = "firstNameAccount" class="editable"></p></p>
-            <p><b>Last Name: </b><p id = "lastNameAccount" class="editable"></p></p>
-            <p><b>Email Address: </b><p id="emailAccount" class="editable"></p></p>
-            <p><b>Phone Number: </b><p id="phoneNumberAccount" class="editable"></p></p>
-            <p><b>Address: </b><p id = "addressAccount" class="editable"></p></p>
-            <input type="button" id="cancel" value="Cancel">
-          </form>
+          <div class="tabs">
+            <ul class="tab-links">
+              <li rel="panel_1" class="active">Booker</a></li>
+              <li rel="panel_2">Renter</a></li>
+            </ul>
+
+            <div class="tab-content">
+              <div id="panel_1" class="tab active">
+                <form action="#">
+                  <h4>Account Information</h4>
+                  <p><b>First Name: </b><p id="firstNameAccount" class="editable"></p></p>
+                  <p><b>Last Name: </b><p id="lastNameAccount" class="editable"></p></p>
+                  <p><b>Email Address: </b><p id="emailAccount" class="editable"></p></p>
+                  <p><b>Phone Number: </b><p id="phoneNumberAccount" class="editable"></p></p>
+                  <p><b>Address: </b><p id="addressAccount" class="editable"></p></p>
+                  <button class='close_button'>Close</button>
+                  <button class='panel_1_button'>Update</button>
+                </form>
+              </div>
+              <div id="panel_2" class="tab">
+                <form action="#">
+                  <h4>Vehicle Information</h4>
+                  <p><b>Vin Number: </b><p id="firstNameAccount" class="editable"></p></p>
+                  <p><b>Model: </b><p id="lastNameAccount" class="editable"></p></p>
+                  <p><b>Year: </b><p id="emailAccount" class="editable"></p></p>
+                  <p><b>Miles: </b><p id="phoneNumberAccount" class="editable"></p></p>
+                  <br>
+                  <button class='close_button'>Close</button>
+                  <button class='panel_2_button'>Upload</button>
+                </form>
+              </div> 
+            </div>
+          </div>
         </div>
+        
         <div class="logo_name">KACAR</div>
         <div id='cssmenu'>
           <ul>
