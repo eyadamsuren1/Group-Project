@@ -580,7 +580,7 @@ textarea {
   width: 700px;
   height: auto;
   margin: 0px;
-  padding: 30px;
+  padding: 0px;
   background-color: white;
   border-radius: 3px;
   font-family: 'Fauna One', serif;
@@ -599,13 +599,9 @@ textarea {
 }
 .tab-links li {
   text-align: center;
+  font-size: 25px;
   width: 44%;
   border: 1px solid black;
-}
-.tab-links a {
-  padding: 10px 10px;
-  display: inline-block;
-  transition: all linear 0.15s;
 }
 .tab-links li:hover {
   font-weight: normal;
@@ -623,20 +619,20 @@ textarea {
   font-weight: normal;
 }
 .tab-links li:first-child {
-  border-top-left-radius: 5px;
+  border-top-left-radius: 3px;
 }
 .tab-links li:first-child {
-  border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 3px;
 }
 .tab-links li:last-child {
-  border-top-right-radius: 5px;
+  border-top-right-radius: 3px;
 }
 .tab-links li:last-child {
-  border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 3px;
 }
 /*----- Content of Tabs -----*/
 .tab-content {
-  padding: 15px;
+  padding: 25px;
 }
 .tab {
   display: none;
@@ -672,4 +668,8 @@ textarea {
 }
 .close_button:hover {
   background: #ff0000;
+}
+.panel_1_button, .panel_2_button, .close_button {
+  margin-top: 10px; 
+  margin-bottom: 20px;
 }
