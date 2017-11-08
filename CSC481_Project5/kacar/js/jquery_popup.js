@@ -64,8 +64,9 @@ $(document).ready(function() {
     $("#account_info").click(function() {
         $("#accountdiv").css("display", "block");
     });
-    $("#panel_1 #cancel").click(function() {
-        $(this).parent().parent().hide();
+    $(".tab-content .close_button").click(function() {
+        $(this).parent().hide();
+        return false;
     });
     /*
     $("#login_button").click(function() {
