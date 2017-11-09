@@ -5,6 +5,7 @@ $(document).ready(function() {
     $("#signup #cancel").click(function() {
         $(this).parent().parent().hide();
     });
+    /*
     $("#sign_button").click(function() {
         var first_name = $("#first_name").val();
         var last_name = $("#last_name").val();
@@ -28,6 +29,7 @@ $(document).ready(function() {
             }
         }
     });
+    */
     $("#log_in").click(function() {
         $("#logindiv").css("display", "block");
     });
