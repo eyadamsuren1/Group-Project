@@ -1,3 +1,46 @@
+function SignUp() {
+    var fname = document.getElementById("First_Name").value;
+	var lname = document.getElementById("Last_Name").value;
+	var email = document.getElementById("email_address").value;
+	var password = document.getElementById("password").value;
+
+
+	if(fname == "" || lname == "" || email == "" || password == "") {
+        alert("Please Fill Out The Form Completely!");
+	} else {
+        $.ajax({
+			type: "POST",
+			url: "./PHP/CreateAccountPHP.php",
+			data: {
+				"email" : email,
+				"password" : password
+			},
+			success: function(userData) {
+                if(userData == 'null')
+                {
+                    alert("Your Email or Password is incorrect. Try Again!");
+                } else {
+                    alert("Success");
+                    console.log(userData);
+                    setCookie("userData", userData);
+                    window.location.href = "http://127.0.0.1/BookACar/user/user_index.html";
+                    //delete_cookie("userData");
+                    //console.log(getCookie("userData"));
+                }
+			}
+		});
+	}
+}
+function successSignUp() {
+    var json = getCookie("userData");
+    console.log(json);
+    obj = JSON.parse(json);
+    document.getElementById("firstNameAccount").innerHTML = obj.firstName;
+    document.getElementById("lastNameAccount").innerHTML = obj.lastName;
+    document.getElementById("emailAccount").innerHTML = obj.email;
+    alert("Welcome " + obj.firstName);
+}
+
 function login() {
     var email = document.getElementById("email_address").value;
 	var password = document.getElementById("password").value;
