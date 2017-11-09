@@ -1,6 +1,6 @@
 function SignUp() {
-    var fname = document.getElementById("First_Name").value;
-	var lname = document.getElementById("Last_Name").value;
+    var fname = document.getElementById("first_name").value;
+	var lname = document.getElementById("last_name").value;
 	var email = document.getElementById("email_address").value;
 	var password = document.getElementById("password").value;
 
