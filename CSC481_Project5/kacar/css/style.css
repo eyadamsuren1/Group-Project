@@ -672,7 +672,7 @@ textarea {
   background: #ff0000;
 }
 .panel_1_button, .panel_2_button, .close_button {
-  margin-top: 10px; 
+  margin-top: 10px;
   margin-bottom: 15px;
 }
 /* Reset */
@@ -693,9 +693,9 @@ textarea {
   z-index: 100;
   cursor: default;
   width: 20%;
-  min-height: 150px;
-  padding: 0 20px 10px 20px;
-  margin: 5px 0px 10px 0px;
+  min-height: 160px;
+  padding: 0px 20px 10px 20px;
+  margin: 0px 0px 10px 0px;
 
   border-radius: 3px;
   border: 1px dashed black;
