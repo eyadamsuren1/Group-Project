@@ -461,10 +461,9 @@ input[type="text"]:focus, input[type="password"]:focus {
 #signup, #login {
   width: 350px;
   margin: 0px;
-  padding: 40px;
+  padding: 30px 30px 20px 30px;
   background-color: white;
   border-radius: 3px;
-  font-family: 'Fauna One', serif;
   position: relative;
   left: 50%;
   top: 50%;
@@ -700,7 +699,7 @@ textarea {
 
   border-radius: 3px;
   border: 1px dashed black;
-  background: #cccccc;
+  background: #ededed;
 }
 .fixed {
   float: left;
