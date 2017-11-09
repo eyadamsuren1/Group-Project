@@ -53,29 +53,26 @@
               </div>
               <div id="panel_2" class="tab">
                 <form action="#">
-                  <div>
                   <h4>Vehicle Information</h4>
-                  <p><b>Vin Number: </b><p id="CarVinNumberAccount" class="editable"></p></p>
-                  <p><b>Model: </b><p id="CarModelAccount" class="editable"></p></p>
-                  <p><b>Year: </b><p id="CarYearAccount" class="editable"></p></p>
-                  <p><b>Miles: </b><p id="CarYearAccount" class="editable"></p></p>
+                  <div class="fixed">
+                    <p><b>Vin Number: </b><p id="CarVinNumberAccount" class="editable"></p></p>
+                    <p><b>Model: </b><p id="CarModelAccount" class="editable"></p></p>
+                    <p><b>Year: </b><p id="CarYearAccount" class="editable"></p></p>
+                    <p><b>Miles: </b><p id="CarYearAccount" class="editable"></p></p>
                   </div>
                   <div class="upload-form" id="uploader">
                     <!-- Select & Upload Button -->
                     <div>
                       <a class="button" id="pickfiles" href="#">Choose File</a>
-                      <!--
-                      <a class="button" id="uploadfiles" href="#">Upload</a>
-                      -->
+                      <!-- id="uploadfiles" ***Upload*** -->
                     </div>
                     <!-- File List -->
                     <div id="filelist" class="cb"></div>
                     <!-- Progress Bar -->
                     <div id="progressbar"></div>
                   </div>
-
                   <button class='close_button'>Close</button>
-                  <button class='panel_2_button'>Upload</button>
+                  <button class='panel_2_button' id="uploadfiles">Upload</button>
                 </form>
               </div> 
             </div>

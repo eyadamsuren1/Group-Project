@@ -689,16 +689,22 @@ textarea {
 }
 /* Form Container */
 .upload-form {
+  float: left;
   position: relative;
   z-index: 100;
   cursor: default;
-  width: 150px;
-  min-height: 180px;
-  padding: 0 25px 25px 25px;
+  width: 20%;
+  min-height: 150px;
+  padding: 0 20px 10px 20px;
+  margin: 5px 0px 10px 0px;
 
   border-radius: 3px;
   border: 1px dashed black;
   background: #cccccc;
+}
+.fixed {
+  float: left;
+  width: 70%;
 }
 /* Clear Floats */
 .upload-form .cb {
@@ -723,7 +729,7 @@ textarea {
 /* Select & Upload Buttons */
 .upload-form .button {
   height: 30px;
-  margin: 15px 0;
+  margin: 10px 0;
   
   font-size: 14px;
   color: #777;
