@@ -570,10 +570,6 @@ textarea {
   display: none;
   z-index: 9999;
 }
-.editable input {
-  display:block;
-  width:auto;
-}
 /*----- Tabs -----*/
 .tabs {
   width: 700px;
@@ -635,6 +631,10 @@ textarea {
 /*----- Content of Tabs -----*/
 .tab-content {
   padding: 15px 25px 25px 25px;
+}
+.tab-content p {
+	display: inline;
+    line-height: 3.0;
 }
 .tab {
   display: none;
@@ -701,9 +701,10 @@ textarea {
   border: 1px dashed black;
   background: #ededed;
 }
-.fixed {
+.vehicle_info {
   float: left;
   width: 70%;
+  padding-right: 20px;
 }
 /* Clear Floats */
 .upload-form .cb {
