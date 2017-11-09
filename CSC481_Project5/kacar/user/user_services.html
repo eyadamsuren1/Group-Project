@@ -4,11 +4,17 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,follow" />
     <title>Book-A-Car | Services</title>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/jquery_popup.js"></script>
     <script src="js/authentication.js"></script>
+
+    <script src="../js/plupload.full.js"></script>
+    <script src="../js/jquery-progressbar.min.js"></script>
+
   </head>
   <body onload="successLogin()">
     <header>
@@ -41,11 +47,27 @@
               </div>
               <div id="panel_2" class="tab">
                 <form action="#">
+                  <div>
                   <h4>Vehicle Information</h4>
                   <p><b>Vin Number: </b><p id="CarVinNumberAccount" class="editable"></p></p>
                   <p><b>Model: </b><p id="CarModelAccount" class="editable"></p></p>
                   <p><b>Year: </b><p id="CarYearAccount" class="editable"></p></p>
                   <p><b>Miles: </b><p id="CarYearAccount" class="editable"></p></p>
+                  </div>
+                  <div class="upload-form" id="uploader">
+                    <!-- Select & Upload Button -->
+                    <div>
+                      <a class="button" id="pickfiles" href="#">Choose File</a>
+                      <!--
+                      <a class="button" id="uploadfiles" href="#">Upload</a>
+                      -->
+                    </div>
+                    <!-- File List -->
+                    <div id="filelist" class="cb"></div>
+                    <!-- Progress Bar -->
+                    <div id="progressbar"></div>
+                  </div>
+
                   <button class='close_button'>Close</button>
                   <button class='panel_2_button'>Upload</button>
                 </form>
