@@ -676,3 +676,156 @@ textarea {
   margin-top: 10px; 
   margin-bottom: 15px;
 }
+/* Reset */
+.upload-form,
+.upload-form div,
+.upload-form span,
+.upload-form input,
+.upload-form a,
+.upload-form h1,
+.upload-form p {
+  margin: 0;
+  outline: none;
+}
+/* Form Container */
+.upload-form {
+  position: relative;
+  z-index: 100;
+  cursor: default;
+  width: 150px;
+  min-height: 180px;
+  padding: 0 25px 25px 25px;
+
+  border-radius: 3px;
+  border: 1px dashed black;
+  background: #cccccc;
+}
+/* Clear Floats */
+.upload-form .cb {
+  clear: both;
+}
+/* Close Button */
+.upload-form .close {
+  position: absolute;
+  display: block;
+  width: 12px;
+  height: 12px;
+  top: 28px;
+  right: 24px;
+}
+/* Paragraph */
+.upload-form p {
+  padding: 10px 0;
+  font-family: sans-serif;
+  font-size: 12px;
+  color: #a4a5a8;
+}
+/* Select & Upload Buttons */
+.upload-form .button {
+  height: 30px;
+  margin: 15px 0;
+  
+  font-size: 14px;
+  color: #777;
+  
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 30px;
+  
+  background: #ffffff;
+}
+
+.upload-form .button:hover {
+  background: #f2f2f2;
+  font-weight: normal;
+}
+
+.upload-form #pickfiles {
+  width: 100%;
+  float: left;
+  border-radius: 3px;
+  border: 1px solid black;
+}
+
+/* Added Files */
+.upload-form .addedFile {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  word-break: break-all;
+  margin-bottom: 5px;
+  padding: 0 25px 0 25px;
+  height: 30px;
+  
+  font-family: sans-serif;
+  font-size: 12px;
+  line-height: 30px;
+  color: #646464;
+
+  background: #f6f6f6 url(../img/icons/file.png) no-repeat 5px center;
+
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* Remove File Button */
+.upload-form a.removeFile {
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 10px;
+  top: 10px;
+  right: 10px;
+  background: url(../img/icons/remove-file.png);
+}
+
+/* Progress Bar */
+.upload-form .ui-progressbar,
+.upload-form .ui-progressbar-value {
+  position: relative;
+  height: 4px;
+  
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+}
+
+.upload-form .ui-progressbar {
+  cursor: pointer;
+  margin: 15px 0 20px 0;
+  background: #242424;
+
+  -webkit-box-shadow: 0px 1px 0px rgba(255,255,255, .1);
+  -moz-box-shadow: 0px 1px 0px rgba(255,255,255, .1);
+  box-shadow: 0px 1px 0px rgba(255,255,255, .1);
+}
+
+.upload-form .ui-progressbar-value {
+  background: #82d344;
+  background: -webkit-linear-gradient(top, #82d344 0%, #51af34 100%);
+  background: -moz-linear-gradient(top, #82d344 0%, #51af34 100%);
+  background: -o-linear-gradient(top, #82d344 0%, #51af34 100%);
+  background: -ms-linear-gradient(top, #82d344 0%, #51af34 100%);
+  background: linear-gradient(top, #82d344 0%, #51af34 100%);
+}
+
+.upload-form .ui-progressbar-value span.progressTooltip {
+  position: absolute;
+  display: block;
+  width: 36px;
+  height: 14px;
+  padding: 5px 0 4px 0;
+  top: 10px;
+  right: -18px;
+
+  font-family: sans-serif;
+  font-weight: bold;
+  line-height: 14px;
+  text-align: center;
+  font-size: 12px;
+  color: #646464;
+
+  background: transparent url(../img/icons/tooltip.png) no-repeat;
+}
