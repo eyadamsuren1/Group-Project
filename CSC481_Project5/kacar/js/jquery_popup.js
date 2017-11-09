@@ -88,7 +88,11 @@ $(document).ready(function() {
         imageClassName: 'photo',
             
         onImageShow: function() {
-            $(".photobox-image-content").html($(this).attr("alt"));
+            $(".photobox-image-content").html($(this).attr("alt")+
+            	("<br><b>Vin Number: </b>")+
+            	("<br><b>Model: </b>")+
+            	("<br><b>Year: </b>")+
+            	("<br><b>Miles: </b>"));
         }           
     });
     // Click Activator

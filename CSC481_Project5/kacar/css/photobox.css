@@ -83,6 +83,7 @@
 	table-layout: fixed;
 }
 .photobox-image-content {
+	margin: 10px 20px;
 	color: black;
 	overflow: hidden;
 }
