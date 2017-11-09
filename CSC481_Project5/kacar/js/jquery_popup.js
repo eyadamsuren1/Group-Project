@@ -164,7 +164,7 @@ $(document).ready(function() {
         multi_selection: false, // Allow to select one file each time
         container : 'uploader', // The id of the upload form container
         max_file_size : '800kb', // Maximum file size allowed
-        url : 'upload.php', // The url to the upload.php file
+        url : '../PHP/upload.php', // The url to the upload.php file
         flash_swf_url : 'plupload.flash.swf', // The url to thye flash file
         silverlight_xap_url : 'plupload.silverlight.xap', // The url to the silverlight file
         filters : [ {title : "Image files", extensions : "jpg,gif,png"} ] // Filter the files that will be showed on the select files window
