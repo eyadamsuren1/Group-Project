@@ -1,6 +1,5 @@
 <?php
-
-
+	
 if(isset($_POST['submit'])){
 	session_start();
     $data_missing = array();
@@ -32,40 +31,32 @@ if(isset($_POST['submit'])){
         // Trim white space from the name and store the name
         $password = trim($_POST['password']);
 	}
+	
     if(empty($data_missing)){
 		$servername = "localhost";
 		$username = "root";
-		$password = "root";
-// Create connection
-	$dbc = new mysqli($servername, $username, $password);
+		$password = "";
+		$database = "kacar";
 
-	// Check connection
-	if ($dbc->connect_error) {
-		die("Connection failed: " . $dbc->connect_error);
-	} 
-	//echo "Connected successfully";
+
+$dbc = mysqli_connect($servername,$username,$password,$database);
+
+// Check connection
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+ 
+
+	echo "Connected successfully";
 	
         $query = "INSERT INTO user (fname, lname, email, password)
-        VALUES (?, ?, ?, ?)";
-        $stmt = mysqli_prepare($dbc, $query);
-        i Integers
-        d Doubles
-        b Blobs
-        s Everything Else
-        mysqli_stmt_bind_param($stmt, "ssss", $fname,
-                               $lname, $email, $password);
-
-        mysqli_stmt_execute($stmt);
-        $affected_rows = mysqli_stmt_affected_rows($stmt);
-        if($affected_rows == 1){
+        VALUES ('".$fname."','".$lname."', '".$email."', '".$password."')";
+        if($dbc->query($query) === TRUE){
             echo 'New User Created';
-            mysqli_stmt_close($stmt);
-            mysqli_close($dbc);
         } else {
             echo 'Error Occurred<br />';
             echo mysqli_error();
-            mysqli_stmt_close($stmt);
-            mysqli_close($dbc);
         }
     } else {
         echo 'You need to enter the following data<br />';
@@ -73,5 +64,7 @@ if(isset($_POST['submit'])){
             echo "$missing<br />";
         }
     }
+            mysqli_close($dbc);
 }
 ?>
+
