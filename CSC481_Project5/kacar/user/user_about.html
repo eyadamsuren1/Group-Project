@@ -7,6 +7,9 @@
     <meta name="robots" content="noindex,follow" />
     <title>Book-A-Car | About</title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css"/>
@@ -41,14 +44,20 @@
             <div class="tab-content">
               <div id="panel_1" class="tab active">
                 <form action="#">
-                  <h4>Account Information</h4>
-                  <p><b>First Name: </b></p><p id="firstNameAccount" contenteditable="true"></p><br>
-                  <p><b>Last Name: </b></p><p id="lastNameAccount" contenteditable="true"></p><br>
-                  <p><b>Email Address: </b></p><p id="emailAccount" contenteditable="true"></p><br>
-                  <p><b>Phone Number: </b></p><p id="phoneNumberAccount" contenteditable="true"></p><br>
-                  <p><b>Address: </b></p><p id="addressAccount" contenteditable="true"></p><br>
-                  <button class='close_button'>Close</button>
-                  <button class='panel_1_button'>Update</button>
+                    <h4>Account Information</h4>
+                    <div class="account_info">
+                      <p><b>First Name: </b></p><p id="firstNameAccount" contenteditable="true"></p><br>
+                      <p><b>Last Name: </b></p><p id="lastNameAccount" contenteditable="true"></p><br>
+                    <p><b>Email Address: </b></p><p id="emailAccount" contenteditable="true"></p><br>
+                    <p><b>Phone Number: </b></p><p id="phoneNumberAccount" contenteditable="true"></p><br>
+                      <p><b>Address: </b></p><p id="addressAccount" contenteditable="true"></p><br>
+                    </div>
+                    <div id="profile-container">
+                      <image id="profileImage" src="../img/icons/profile_picture.png" />
+                    </div>
+                    <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture>
+                    <button class='close_button'>Close</button>
+                    <button class='panel_1_button'>Update</button>
                 </form>
               </div>
               <div id="panel_2" class="tab">

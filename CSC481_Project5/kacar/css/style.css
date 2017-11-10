@@ -835,3 +835,36 @@ textarea {
 
   background: transparent url(../img/icons/tooltip.png) no-repeat;
 }
+/**Profile picture**/
+#imageUpload {
+	display: none;
+}
+#profileImage {
+  cursor: pointer;
+}
+#profile-container {
+  float: left;
+  margin: 20px 0px 70px 0px;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  -webkit-border-radius: 10%;
+  -moz-border-radius: 10%;
+  -ms-border-radius: 10%;
+  -o-border-radius: 10%;
+  border-radius: 10%;
+  border: 2px solid black;
+}
+#profile-container img {
+  width: 150px;
+  height: 150px;
+}
+#profile-container:hover {
+  opacity: 0.6;
+  border: 2px solid white;
+}
+.account_info {
+  float: left;
+  width: 70%;
+  padding-right: 20px;
+}
