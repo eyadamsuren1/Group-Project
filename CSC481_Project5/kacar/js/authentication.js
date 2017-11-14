@@ -56,7 +56,7 @@ function login() {
 				"password" : password
 			},
 			success: function(userData) {
-                if(userData == 'null')
+                if(userData == 'null' || userData.includes('</br>'))
                 {
                     alert("Your Email or Password is incorrect. Try Again!");
                 } else {
