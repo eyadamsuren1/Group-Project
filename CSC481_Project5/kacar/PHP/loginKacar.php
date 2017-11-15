@@ -7,7 +7,7 @@ if(isset($_POST["email"]) && isset($_POST['password']))
 	//echo $_POST['password'];
 	$servername = "localhost";
 	$username = "root";
-	$password = "HelloWorld5";
+	$password = "root";
 	
 	
 	class User{
