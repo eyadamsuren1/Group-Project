@@ -1,34 +1,31 @@
 <?php  
 ///test/demo_form.php?name1=value1&name2=value2
 //echo 'hello';
-if(isset($_POST["email"]) && isset($_POST['password']))
-{
+if(isset($_POST["email"]) && isset($_POST['password'])) {
 	//echo $_POST['email'];
 	//echo $_POST['password'];
 	$servername = "localhost";
 	$username = "root";
 	$password = "root";
 	
-	
-	class User{
-			public $userid = "";
-			public $firstName = "";
-			Public $lastName = "";
-			public $email = "";
-			public $password = "";
-			public $renter_status = "";
-			public $profile_pic_dir="";
-			public $vehicles = array();
+	class User {
+		public $userid = "";
+		public $firstName = "";
+		Public $lastName = "";
+		public $email = "";
+		public $password = "";
+		public $renter_status = "";
+		public $profile_pic_dir = "";
+		public $vehicles = array();
 	}
-	class Vehicle{
+	class Vehicle {
 		public $vehicleid = "";
 		public $model = "";
 		public $year = "";
 		public $vin = "";
 		public $miles = "";
 	}
-		
-		
+
 	$user = new User();
 	$vehicleList = array();
 	$mysqli = new mysqli("localhost", "root", "root", "kacar");
@@ -114,19 +111,13 @@ if(isset($_POST["email"]) && isset($_POST['password']))
 					//echo $myJSON;
 					break;
 				}
-				
-				
-				
-				
 				$result->free();
 			}
-			
 		} while ($mysqli->next_result());
 	}
 
 	$user->vehicles = $vehicleList;
 	$myJSON = json_encode($user);
-	
 	
 	/* close connection */
 	$mysqli->close();
@@ -135,12 +126,7 @@ if(isset($_POST["email"]) && isset($_POST['password']))
 	} else {
 		echo $myJSON;
 	}
-
-	}
-	else
-	{
+	} else {
 		echo 'null';
 	}
-
-			
 ?>
