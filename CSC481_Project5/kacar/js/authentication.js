@@ -32,6 +32,7 @@ function SignUp() {
 	}
 }
 function successSignUp() {
+    
     var json = getCookie("userData");
     console.log(json);
     obj = JSON.parse(json);
@@ -72,6 +73,7 @@ function login() {
 	}
 }
 function successLogin() {
+    
     var json = getCookie("userData");
     console.log(json);
     obj = JSON.parse(json);
@@ -113,6 +115,44 @@ function checkCookie() {
         
     }
 }
+
+function loadVehicles()
+{
+    //var email = document.getElementById("email_address").value;
+	//var password = document.getElementById("password").value;
+
+        $.ajax({
+			type: "POST",
+			url: "./PHP/loadVehicles.php",
+			data: {
+				//"email" : email,
+				//"password" : password
+			},
+			success: function(vehicleData) {
+                if(vehicleData == 'null' || vehicleData.includes('</br>'))
+                {
+                    alert("Could Not Load Vehicles");
+                } else {
+                    alert("Success");
+                    console.log(vehicleData);
+                    setCookie("vehicleData", vehicleData);
+                    //window.location.href = "http://127.0.0.1/BookACar/user/user_index.html";
+                    //delete_cookie("userData");
+                    //console.log(getCookie("userData"));
+                }
+			}
+        });
+        
+        var json = getCookie("vehicleData");
+        obj = JSON.parse(json);
+        var temp = obj[0].picdir;
+        document.getElementById("samplePic").src = temp[0];
+        document.getElementById('samplePic').photoboxsrc = temp[0];
+        alert(temp[0]);
+
+	
+}
+
 var delete_cookie = function(name) {
     document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 };

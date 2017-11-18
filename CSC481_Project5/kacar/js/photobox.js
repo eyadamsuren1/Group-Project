@@ -72,8 +72,8 @@
 			this.pMainImage.posY = image.offset().top;
 			this.pMainImage.widthSrc = image.width();
 			this.pMainImage.heightSrc = image.height();
-			if (image.attr("photobox-src")) {
-				this.lazyLoadImage.src = image.attr("photobox-src");
+			if (image.attr("photoboxsrc")) {
+				this.lazyLoadImage.src = image.attr("photoboxsrc");
 			}
 			else {
 				this.lazyLoadImage.src = image.attr("src");
