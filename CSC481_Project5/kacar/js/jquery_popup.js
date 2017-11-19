@@ -66,9 +66,9 @@ $(document).ready(function() {
     $("#account_info").click(function() {
         $("#accountdiv").css("display", "block");
     });
-    $(".tab-content .close_button").click(function() {
-        $(this).parent().hide();
-        return false;
+    $("#accountdiv .close_button").click(function() {
+		$("#accountdiv").hide();
+		return false;
     });
     /*
     $("#login_button").click(function() {
