@@ -35,7 +35,7 @@
         if(empty($data_missing)){
     		$servername = "localhost";
     		$username = "root";
-    		$password = "";
+    		$password = "root";
     		$database = "kacar";
 
             $dbc = mysqli_connect($servername, $username, $password, $database);
