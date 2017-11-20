@@ -162,6 +162,27 @@ $(document).ready(function() {
         });
     });
 
+    /*Closing Popup on ESC keypress*/
+    /*
+	$(document).keyup(function(ev){
+	    if(ev.keyCode == 27)
+	        $("#logindiv").trigger("#cancel");
+	});
+
+    $(document).bind('keydown', function(e) {
+        if (e.which == 27) {
+            alert('esc pressed');
+        }
+    });
+        $(document).keydown(function(e) {
+        // ESCAPE key pressed
+        if (e.keyCode == 27) {
+            window.close();
+            alert("esc pressed");
+        }
+    });
+    */
+
     // Upload Form
     // Settings ////////////////////////////////////////////////
     var uploader = new plupload.Uploader({
