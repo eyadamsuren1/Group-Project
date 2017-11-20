@@ -30,8 +30,11 @@
 				$(this).fadeTo("fast", 0.5);
 			});
 			
+			// Photobox Close Title
+			$(".photobox-close-btn").attr('title','Close');
+
 			// Photobox stage close
-			$(".photobox-close-btn a").click(function() {
+			$(".photobox-close-btn").click(function() {
 				$this.hide();
 				return false;
 			});
@@ -115,9 +118,6 @@
 							'</div>',
 							'<div class="photobox-container-right">',
 								'<div class="photobox-close-btn">',
-									'<a title="Close" href="" style="float:right; margin:8px">',
-										'<img src="./img/icons/close.png" style="height:13px; width:13px"/>',
-									'</a>',
 									'<div style="clear:both"></div>',
 								'</div>',
 								'<div class="photobox-image-content"></div>',

@@ -84,7 +84,7 @@
 	table-layout: fixed;
 }
 .photobox-image-content {
-	margin: 10px 20px;
+	margin: 25px 20px 0px 20px;
 	color: black;
 	overflow: hidden;
 }
@@ -183,4 +183,13 @@ table, tr, td {
 .photobox:hover {
   border: 1px solid #000000;
   opacity: 0.8;
+}
+.photobox-close-btn {
+	background-image: url(../img/icons/close.png);
+	background-repeat: no-repeat;
+    background-size: contain;
+	float: right;
+	margin: 8px;
+	height: 13px;
+	width: 13px;
 }
