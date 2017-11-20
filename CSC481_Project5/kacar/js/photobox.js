@@ -1,4 +1,18 @@
 (function($) {
+	function myMap() {
+	  var myCenter = new google.maps.LatLng(51.508742,-0.120850);
+	  var mapCanvas = document.getElementById("googleMap");
+	  var mapOptions = {center: myCenter, zoom: 5};
+	  var map = new google.maps.Map(mapCanvas, mapOptions);
+	  var marker = new google.maps.Marker({position:myCenter});
+	  marker.setMap(map);
+
+	  // Zoom to 9 when clicking on marker
+	  google.maps.event.addListener(marker,'click',function() {
+	    map.setZoom(9);
+	    map.setCenter(marker.getPosition());
+	  });
+	}
 	function Photo_Box(opts) {
 		this.settings = $.extend({}, $.fn.PhotoBox.defaults, opts);
 		this.bodyDimension = {width:0,height:0};
@@ -46,7 +60,6 @@
 				$this.hide();
 				return false;
 			});
-			
 			// Left side overlay hover animation
 			$(".photobox-container-left").hover(function() {
 				$(".photobox-image-stage-overlay").fadeIn($this.settings.imageOverlayFadeSpeed);
@@ -121,6 +134,10 @@
 									'<div style="clear:both"></div>',
 								'</div>',
 								'<div class="photobox-image-content"></div>',
+								'<div id="googleMap">',
+									'<button>test</button>',
+									'<div style="clear:both"></div>',
+								'</div>',
 								'<div class="photobox-container-bottom">',
 									'<button class="photobox-book">Book</button><button class="photobox-cancel">Cancel</button>',
 									'<div style="clear:both"></div>',
@@ -324,39 +341,38 @@
 }(jQuery));
 
 /*
-<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.9/jquery-ui.js" type="text/javascript"></script>
-<link href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.9/themes/blitzer/jquery-ui.css"
-rel="stylesheet" type="text/css" />
-<script type="text/javascript">
-$(function () {
-    $("#btnShow").click(function () {
-        $("#dialog").dialog({
-            modal: true,
-            title: "Google Map",
-            width: 600,
-            hright: 450,
-            buttons: {
-                Close: function () {
-                    $(this).dialog('close');
-                }
-            },
-            open: function () {
-                var mapOptions = {
-                    center: new google.maps.LatLng(19.0606917, 72.83624970000005),
-                    zoom: 18,
-                    mapTypeId: google.maps.MapTypeId.ROADMAP
-                }
-                var map = new google.maps.Map($("#dvMap")[0], mapOptions);
-            }
-        });
-    });
-});
+https://www.w3schools.com/graphics/tryit.asp?filename=trymap_events_click
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<div id="map" style="width:100%;height:500px"></div>
+
+<script>
+function myMap() {
+  var myCenter = new google.maps.LatLng(51.508742,-0.120850);
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {center: myCenter, zoom: 5};
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  var marker = new google.maps.Marker({position:myCenter});
+  marker.setMap(map);
+
+  // Zoom to 9 when clicking on marker
+  google.maps.event.addListener(marker,'click',function() {
+    map.setZoom(9);
+    map.setCenter(marker.getPosition());
+  });
+}
 </script>
-<input id = "btnShow" type="button" value="Show Maps"/>
-<div id="dialog" style="display: none">
-<div id="dvMap" style="height: 380px; width: 580px;">
-</div>
-</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+
+</body>
+</html>
+
 */
