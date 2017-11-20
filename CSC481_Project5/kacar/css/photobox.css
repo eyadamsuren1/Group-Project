@@ -194,7 +194,7 @@ table, tr, td {
 	width: 13px;
 }
 /*Google Map*/
-#googleMap {
+#map {
 	position: absolute;
 	width: 100%;
 	height: 300px;
