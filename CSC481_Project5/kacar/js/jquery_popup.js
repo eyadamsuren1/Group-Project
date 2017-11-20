@@ -70,17 +70,6 @@ $(document).ready(function() {
 		$("#accountdiv").hide();
 		return false;
     });
-    /*
-    $("#login_button").click(function() {
-        var name = $("#email_address").val();
-        var password = $("#password").val();
-        if (email_address == "" || password == ""){
-            alert("Email Address or Password was Wrong");
-        }else{
-            $("#accountdiv").css("display", "none");
-        }
-    });
-    */
     $(".photobox img").PhotoBox({
         rightWidth: 360,
         leftBgColor: "black",
