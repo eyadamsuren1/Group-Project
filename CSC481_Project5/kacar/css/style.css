@@ -500,11 +500,12 @@ textarea {
   display: table-cell;
 }
 .teams {
-  float: left;
+  margin: auto;
 }
 .teams, .teams th, .teams td {
   border: 1px solid #000000;
   border-collapse: collapse;
+  padding: 10px;
 }
 .main_table img {
   width: 100%;
