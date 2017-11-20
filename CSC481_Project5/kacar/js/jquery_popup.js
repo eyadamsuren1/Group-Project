@@ -91,10 +91,10 @@ $(document).ready(function() {
             
         onImageShow: function() {
             $(".photobox-image-content").html(
-            	("<b>Vin Number: </b>")+
-            	("<br><b>Model: </b>")+
+            	("<b>Model: </b>")+
             	("<br><b>Year: </b>")+
-            	("<br><b>Miles: </b>"));
+            	("<br><b>Miles: </b>")+
+            	("<br><b>Vin Number: </b>"));
         }           
     });
     // Click Activator
