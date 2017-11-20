@@ -35,6 +35,10 @@
 				$this.hide();
 				return false;
 			});
+			$(".photobox-cancel").click(function() {
+				$this.hide();
+				return false;
+			});
 			$(".photobox-overlay").click(function() {
 				$this.hide();
 				return false;
@@ -117,6 +121,10 @@
 									'<div style="clear:both"></div>',
 								'</div>',
 								'<div class="photobox-image-content"></div>',
+								'<div class="photobox-container-bottom">',
+									'<button class="photobox-book">Book</button><button class="photobox-cancel">Cancel</button>',
+									'<div style="clear:both"></div>',
+								'</div>',
 							'</div>',
 							'<div style="clear:both"></div>',
 						'</div>',

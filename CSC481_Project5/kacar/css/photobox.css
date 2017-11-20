@@ -47,6 +47,7 @@
 	height: 100%
 }
 .photobox-container-right {
+	position: relative;
 	float: right;
 	background-color: white;
 }
@@ -150,10 +151,28 @@ table, tr, td {
 	padding: 0px;
 	border-collapse: collapse;
 }
-.bottom-button {
-	position: absolute;
-	bottom: 15px;
+.photobox-container-bottom {
+	width: 100%;
+    position: absolute;
+    bottom: 0;
 	text-align: center;
+}
+.photobox-book, .photobox-cancel {
+	background-color: #bcbcbc;
+	border: 1px solid #444444;
+	border-radius: 3px;
+	font-Weight: bold;
+	font-size: 18px;
+	width: 40%;
+	padding: 5px 0px;
+	display: inline-block;
+	margin: 10px 5px;
+}
+.photobox-book:hover {
+  background: #08ff00;
+}
+.photobox-cancel:hover {
+  background: #ff0000;
 }
 .photobox {
   position: relative;
