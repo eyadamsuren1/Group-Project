@@ -66,21 +66,10 @@ $(document).ready(function() {
     $("#account_info").click(function() {
         $("#accountdiv").css("display", "block");
     });
-    $(".tab-content .close_button").click(function() {
-        $(this).parent().hide();
-        return false;
+    $("#accountdiv .close_button").click(function() {
+		$("#accountdiv").hide();
+		return false;
     });
-    /*
-    $("#login_button").click(function() {
-        var name = $("#email_address").val();
-        var password = $("#password").val();
-        if (email_address == "" || password == ""){
-            alert("Email Address or Password was Wrong");
-        }else{
-            $("#accountdiv").css("display", "none");
-        }
-    });
-    */
     $(".photobox img").PhotoBox({
         rightWidth: 360,
         leftBgColor: "black",
@@ -90,11 +79,11 @@ $(document).ready(function() {
         imageClassName: 'photo',
             
         onImageShow: function() {
-            $(".photobox-image-content").html($(this).attr("alt")+
-            	("<br><b>Vin Number: </b>")+
-            	("<br><b>Model: </b>")+
+            $(".photobox-image-content").html(
+            	("<b>Model: </b>")+
             	("<br><b>Year: </b>")+
-            	("<br><b>Miles: </b>"));
+            	("<br><b>Miles: </b>")+
+            	("<br><b>Vin Number: </b>"));
         }           
     });
     // Click Activator
@@ -161,6 +150,27 @@ $(document).ready(function() {
             $(this).prev().show();
         });
     });
+
+    /*Closing Popup on ESC keypress*/
+    /*
+	$(document).keyup(function(ev){
+	    if(ev.keyCode == 27)
+	        $("#logindiv").trigger("#cancel");
+	});
+
+    $(document).bind('keydown', function(e) {
+        if (e.which == 27) {
+            alert('esc pressed');
+        }
+    });
+        $(document).keydown(function(e) {
+        // ESCAPE key pressed
+        if (e.keyCode == 27) {
+            window.close();
+            alert("esc pressed");
+        }
+    });
+    */
 
     // Upload Form
     // Settings ////////////////////////////////////////////////

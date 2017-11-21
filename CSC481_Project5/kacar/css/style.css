@@ -11,9 +11,11 @@ body {
   margin: auto;
   overflow: hidden;
 }
-.containers {
+.side-container {
   width: 85%;
   margin: auto;
+  background-color: #e5e5e5;
+  padding-bottom: 50px;
 }
 #cssmenu {
   padding-top: 100px;
@@ -291,6 +293,13 @@ header a:hover {
   -moz-background-clip: text;
   background-clip: text;
 }
+/* Main Container */
+.main-container {
+  width: 85%;
+  margin: auto;
+  background-color: #e5e5e5;
+  padding-bottom: 50px;
+}
 /* Showcase */
 #showcase {
   width: 85%;
@@ -300,8 +309,6 @@ header a:hover {
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   text-align: center;
   color: #ffffff;
-  border-bottom-style: outset;
-  border-color: #000000;
 }
 #showcase:hover {
   opacity: 0.75;
@@ -330,7 +337,7 @@ header a:hover {
 }
 #search form {
   margin: auto;
-  width: 65%;
+  width: 90%;
   padding: 7px;
   margin-top: 30px;
   margin-bottom: 5px;
@@ -347,7 +354,6 @@ header a:hover {
 aside#sidebar {
   float: right;
   width: 30%;
-  margin-top: 10px;
 }
 aside#sidebar .quote input, aside#sidebar .quote textarea {
   width: 90%;
@@ -355,6 +361,7 @@ aside#sidebar .quote input, aside#sidebar .quote textarea {
 }
 /* Main-col */
 article#main-col {
+  margin-left: 20px;
   float: left;
   width: 65%;
 }
@@ -364,11 +371,10 @@ ul#services li {
   padding: 15px;
   border: #cccccc solid 1px;
   margin-bottom: 5px;
-  background: #e6e6e6;
+  background: #ffffff;
 }
 footer {
   padding: 10px;
-  margin-top: 30px;
   color: #000000;
   background-color: #bcbcbc;
   border-top-style: solid;
@@ -486,7 +492,7 @@ textarea {
   margin: auto;
   border-collapse: collapse;
   table-layout: fixed;
-  width: 65%;
+  width: 90%;
 }
 .main_table td {
   text-align: center;
@@ -494,11 +500,12 @@ textarea {
   display: table-cell;
 }
 .teams {
-  float: left;
+  margin: auto;
 }
 .teams, .teams th, .teams td {
   border: 1px solid #000000;
   border-collapse: collapse;
+  padding: 10px;
 }
 .main_table img {
   width: 100%;
@@ -523,10 +530,10 @@ textarea {
 }
 /*Group Button*/
 .btn-group {
-  width: 65%;
-  background-color: #bcbcbc;
+  width: 90%;
+  background-color: #a3a3a3;
   color: black;
-  font-size: 0.9vw;
+  font-size: 1.1vw;
   text-align: center;
   margin: auto;
   border-radius: 5px;
