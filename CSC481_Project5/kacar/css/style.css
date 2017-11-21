@@ -12,7 +12,7 @@ body {
   overflow: hidden;
 }
 .side-container {
-  width: 85%;
+  width: 80%;
   margin: auto;
   background-color: #e5e5e5;
   padding-bottom: 50px;
@@ -252,7 +252,7 @@ header {
   min-height: 70px;
   border-bottom-style: outset;
   border-color: #000000;
-  width: 85%;
+  width: 80%;
   margin: auto;
 }
 header a {
@@ -295,14 +295,14 @@ header a:hover {
 }
 /* Main Container */
 .main-container {
-  width: 85%;
+  width: 80%;
   margin: auto;
   background-color: #e5e5e5;
   padding-bottom: 50px;
 }
 /* Showcase */
 #showcase {
-  width: 85%;
+  width: 80%;
   margin: auto;
   min-height: 500px;
   background: url('../img/icons/showcase.jpg') center center no-repeat;
@@ -352,6 +352,7 @@ header a:hover {
 }
 /* Sidebar */
 aside#sidebar {
+  margin: 5px 10px;
   float: right;
   width: 30%;
 }
@@ -361,7 +362,7 @@ aside#sidebar .quote input, aside#sidebar .quote textarea {
 }
 /* Main-col */
 article#main-col {
-  margin-left: 20px;
+  margin: 5px 10px;
   float: left;
   width: 65%;
 }

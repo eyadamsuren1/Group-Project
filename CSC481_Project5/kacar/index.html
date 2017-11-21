@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
 
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4lf3dLDOuqsvBEreeQsOchv6XqtX_3t4&callback=initMap"></script>
+	
     <link href="./css/photobox.css" rel="stylesheet" type="text/css"/>
     <script src="./js/photobox.js"></script>
     <link rel="stylesheet" href="./css/style.css">
@@ -177,24 +179,5 @@
       <p>Book-A-Car ~ Copyright &copy; 2017</p>
       <p><a href="#">Your Site</a> &#124; <a href="#">Terms of Use</a> &#124; <a href="#">Privacy Policy</a> &#124; <a href="#">Help</a></p>
     </footer>
-    <script>
-		function myMap() {
-		  var myCenter = new google.maps.LatLng(51.508742,-0.120850);
-		  var mapCanvas = document.getElementById("map");
-		  var mapOptions = {center: myCenter, zoom: 5};
-		  var map = new google.maps.Map(mapCanvas, mapOptions);
-		  var marker = new google.maps.Marker({position:myCenter});
-		  marker.setMap(map);
-
-		  // Zoom to 9 when clicking on marker
-		  google.maps.event.addListener(marker,'click',function() {
-		    map.setZoom(9);
-		    map.setCenter(marker.getPosition());
-		  });
-		}
-	</script>
-
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
-	
   </body>
 </html>
