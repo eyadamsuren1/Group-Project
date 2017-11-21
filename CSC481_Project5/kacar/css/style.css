@@ -405,7 +405,7 @@ footer {
   }
 }
 /*Log In & Sign Up*/
-input {
+#logindiv input, #signupdiv input {
   width: 100%;
   height: 35px;
   margin-top: 5px;
@@ -413,17 +413,18 @@ input {
   border-radius: 3px;
   padding: 5px;
 }
-input[type="button"] {
+#logindiv input[type="button"], #signupdiv input[type="button"] {
   background-color: #bcbcbc;
   border: 1px solid #444444;
   font-Weight: bold;
   font-size: 18px;
   width: 48%;
 }
-input[type="button"]:hover {
+#logindiv input[type="button"]:hover, #signupdiv input[type="button"]:hover {
   background: #08ff00;
 }
-input[type="text"], input[type="password"] {
+#logindiv input[type="text"], #logindiv input[type="password"],
+#signupdiv input[type="text"], #signupdiv input[type="password"] {
   border: none;
   border-bottom: 2px solid #262626;
   outline: none;
@@ -435,7 +436,8 @@ input[type="text"], input[type="password"] {
   box-sizing: border-box;
   margin: 20px 0px;
 }
-input[type="text"]:focus, input[type="password"]:focus {
+#logindiv input[type="text"]:focus, #logindiv input[type="password"]:focus,
+#signupdiv input[type="text"]:focus, #signupdiv input[type="password"]:focus {
   border-bottom: 2px solid #f00;
 }
 #sign_up, #log_in, #sign_out, #account_info {
@@ -798,7 +800,6 @@ textarea {
 /* Progress Bar */
 .upload-form .ui-progressbar,
 .upload-form .ui-progressbar-value {
-  position: relative;
   height: 4px;
   
   -webkit-border-radius: 1px;
@@ -839,7 +840,7 @@ textarea {
   line-height: 14px;
   text-align: center;
   font-size: 12px;
-  color: #646464;
+  color: #000000;
 
   background: transparent url(../img/icons/tooltip.png) no-repeat;
 }
