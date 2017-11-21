@@ -45,10 +45,20 @@ function successSignUp() {
 function login() {
     var email = document.getElementById("email_address").value;
 	var password = document.getElementById("password").value;
-
-	if(email == "" || password == "") {
+    if(email == "" || password == "") {
         alert("Please Fill Out The Form Completely!");
-	} else {
+    }
+    /*
+	if(email == "") {
+        document.getElementById('error').innerHTML="<p>Email is required!</p>";
+        return false;
+	}
+    if(password == "") {
+        document.getElementById('error').innerHTML+="<p>Password is required!</p>";
+        return false;
+    } 
+    */
+    else {
         $.ajax({
 			type: "POST",
 			url: "./PHP/loginKacar.php",

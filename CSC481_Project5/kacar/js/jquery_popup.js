@@ -5,6 +5,7 @@ $(document).ready(function() {
     $("#signup #cancel").click(function() {
         $(this).parent().parent().hide();
     });
+    $('#error').show(1).delay(3000).hide(1);
     /*
     $("#sign_button").click(function() {
         var first_name = $("#first_name").val();
