@@ -432,7 +432,7 @@ input[type="text"], input[type="password"] {
   font-size: 16px;
   padding-left: 20px;
   box-sizing: border-box;
-  margin-bottom: 20px;
+  margin: 20px 0px;
 }
 input[type="text"]:focus, input[type="password"]:focus {
   border-bottom: 2px solid #f00;
@@ -877,12 +877,14 @@ textarea {
 }
 
 #error {
-  width: 92%; 
-  margin: 0px auto; 
-  padding: 10px; 
-  border: 1px solid #a94442; 
+  display: none;
+  width: 100%; 
+  margin: auto; 
   color: #a94442; 
   background: #f2dede; 
-  border-radius: 5px; 
-  text-align: left;
+  border-radius: 3px; 
+  text-align: center;
+}
+#error p {
+  margin: 0px;
 }
