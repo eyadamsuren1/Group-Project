@@ -98,6 +98,7 @@ function signOut() {
     obj = JSON.parse(json);
     alert("Goodbye " + obj.firstName);
     delete_cookie("userData");
+    delete_cookie("vehicleData");
     window.location.href = "http://127.0.0.1/BookACar/index.html";
 }
 function setCookie(cname, cvalue) {
@@ -181,11 +182,13 @@ function loadVehicles(param)
             {
                 var img = document.createElement("img");
                 img.setAttribute("class", "photo");
-                img.setAttribute("photoboxsrc", temp[j]);
+                
                 if(document.getElementById("unlogged"))
                 {
+                    img.setAttribute("photoboxsrc", temp[j]);
                     img.setAttribute("src", temp[j]);
                 } else {
+                    img.setAttribute("photoboxsrc", "./." + temp[j]);
                     img.setAttribute("src", "./." + temp[j]);
                 }
                 

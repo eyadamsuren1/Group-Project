@@ -82,12 +82,12 @@ $(document).ready(function() {
         onImageShow: function() {
             
             var path = $(this).attr("src");
-            alert(paths);
+            //alert(paths);
             var id = path.split("/")[5];
             var json = getCookie("vehicleData");    //string JSON
             //alert(json);
             obj = JSON.parse(json);     //Array of unique Vehicles
-            console.log(json);
+            //console.log(json);
             var make = "";
             var model = "";
             var year = "";
