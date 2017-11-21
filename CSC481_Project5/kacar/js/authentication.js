@@ -48,6 +48,8 @@ function login() {
 
 	if(email == "" || password == "") {
         alert("Please Fill Out The Form Completely!");
+        //document.getElementById('error').innerHTML="*Please enter a username*";
+        //return false;
 	} else {
         $.ajax({
 			type: "POST",
