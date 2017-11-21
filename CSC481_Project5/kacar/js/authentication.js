@@ -16,7 +16,7 @@ function SignUp() {
 				"password" : password
 			},
 			success: function(userData) {
-                if(userData == 'null'|| userData.includes('</br>'))
+                if(userData == 'null')
                 {
                     alert("Your Email or Password is incorrect. Try Again!");
                 } else {
@@ -145,12 +145,45 @@ function loadVehicles()
 			}
         });
         
-        var json = getCookie("vehicleData");
-        obj = JSON.parse(json);
-        var temp = obj[0].picdir;
-        document.getElementById("samplePic").src = temp[0];
-        document.getElementById('samplePic').photoboxsrc = temp[0];
-        alert(temp[0]);
+        var json = getCookie("vehicleData");    //string JSON
+        //alert(json);
+        obj = JSON.parse(json);     //Array of unique Vehicles
+        
+        
+        var i;
+        for (i = 0; i < obj.length; i++) {
+            var temp = obj[i].picdir; 
+            
+            var id = "box_" + (i+1);
+            var currentElement = document.getElementById(id);
+            currentElement.style.display = "block";
+            var j;
+            for(j = 0; j < temp.length; j++)
+            {
+                var img = document.createElement("img");
+                img.setAttribute("class", "photo");
+                img.setAttribute("photoboxsrc", temp[j]);
+                img.setAttribute("src", temp[j]);
+                img.setAttribute("style", "display:block");
+                currentElement.appendChild(img);
+            }
+            var div = document.createElement("div");
+            div.setAttribute("class", "description");
+            var p = document.createElement("p");
+            p.setAttribute("class", "description_content");
+            p.innerHTML = "$23";
+            currentElement.appendChild(div);
+            div.appendChild(p);
+            
+        }
+
+
+
+
+
+        //document.createAttribute("photoboxsrc").value = temp[0];
+        //document.getElementById("samplePic").src = temp[0];
+        //alert(temp[0]);
 
 	
 }
