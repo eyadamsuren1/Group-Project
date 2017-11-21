@@ -82,6 +82,7 @@ $(document).ready(function() {
         onImageShow: function() {
             
             var path = $(this).attr("src");
+            alert(paths);
             var id = path.split("/")[5];
             var json = getCookie("vehicleData");    //string JSON
             //alert(json);

@@ -90,6 +90,7 @@ function successLogin() {
     document.getElementById("firstNameAccount").innerHTML = obj.firstName;
     document.getElementById("lastNameAccount").innerHTML = obj.lastName;
     document.getElementById("emailAccount").innerHTML = obj.email;
+    loadVehicles();
     alert("Welcome " + obj.firstName);
 }
 function signOut() {
@@ -126,14 +127,24 @@ function checkCookie() {
     }
 }
 
-function loadVehicles()
+function loadVehicles(param)
 {
     //var email = document.getElementById("email_address").value;
-	//var password = document.getElementById("password").value;
+    //var password = document.getElementById("password").value;
+    
+    var path = "";
+
+    if(param == 'unlogged')
+    {
+        path = "./PHP/loadVehicles.php"
+    } else 
+    {
+        path = "./../PHP/loadVehicles.php"
+    }
 
         $.ajax({
 			type: "POST",
-			url: "./PHP/loadVehicles.php",
+			url: path, 
 			data: {
 				//"email" : email,
 				//"password" : password
@@ -171,7 +182,13 @@ function loadVehicles()
                 var img = document.createElement("img");
                 img.setAttribute("class", "photo");
                 img.setAttribute("photoboxsrc", temp[j]);
-                img.setAttribute("src", temp[j]);
+                if(document.getElementById("unlogged"))
+                {
+                    img.setAttribute("src", temp[j]);
+                } else {
+                    img.setAttribute("src", "./." + temp[j]);
+                }
+                
                 if(j == 0)
                 {
                     //img.setAttribute("style", "display:block");
