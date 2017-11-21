@@ -146,8 +146,8 @@ function loadVehicles()
         var json = getCookie("vehicleData");    //string JSON
         //alert(json);
         obj = JSON.parse(json);     //Array of unique Vehicles
-        
-        
+        var price = "";
+        //document.getElementById("photo1").src = "./img/1/mustang1.png";
         var i;
         for (i = 0; i < obj.length; i++) {
             var temp = obj[i].picdir; 
@@ -162,14 +162,20 @@ function loadVehicles()
                 img.setAttribute("class", "photo");
                 img.setAttribute("photoboxsrc", temp[j]);
                 img.setAttribute("src", temp[j]);
-                img.setAttribute("style", "display:block");
+                if(j == 0)
+                {
+                    //img.setAttribute("style", "display:block");
+                }else{
+                    img.setAttribute("style", "display:none");
+                }
+                
                 currentElement.appendChild(img);
             }
             var div = document.createElement("div");
             div.setAttribute("class", "description");
             var p = document.createElement("p");
             p.setAttribute("class", "description_content");
-            p.innerHTML = "$23";
+            p.innerHTML = "$" + obj[i].price + " Per Day";
             currentElement.appendChild(div);
             div.appendChild(p);
             

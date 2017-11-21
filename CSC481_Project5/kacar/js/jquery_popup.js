@@ -79,11 +79,41 @@ $(document).ready(function() {
         imageClassName: 'photo',
             
         onImageShow: function() {
+            
+            var path = $(this).attr("src");
+            var id = path.split("/")[5];
+            var json = getCookie("vehicleData");    //string JSON
+            //alert(json);
+            obj = JSON.parse(json);     //Array of unique Vehicles
+            console.log(json);
+            var make = "";
+            var model = "";
+            var year = "";
+            var miles = "";
+            var vin = "";
+
+            for (i = 0; i < obj.length; i++) {
+                var vehicleID = obj[i].vehicleid;
+
+                if(vehicleID == id)
+                {
+                    make = obj[i].make;
+                    model = obj[i].model;
+                    year = obj[i].year;
+                    miles = obj[i].miles;
+                    vin = obj[i].vin;
+                }
+
+
+            }
+
+
             $(".photobox-image-content").html(
-            	("<b>Model: </b>")+
-            	("<br><b>Year: </b>")+
-            	("<br><b>Miles: </b>")+
-            	("<br><b>Vin Number: </b>"));
+                ("<b>Make: </b>" + make)+
+            	("<br><b>Model: </b>" + model)+
+            	("<br><b>Year: </b>" + year)+
+            	("<br><b>Miles: </b>" + miles)+
+            	("<br><b>Vin Number: </b>" + vin));
         }           
     });
     // Click Activator

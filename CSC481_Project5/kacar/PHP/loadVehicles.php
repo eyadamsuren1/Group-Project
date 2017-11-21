@@ -12,10 +12,12 @@
 	
 	class Vehicle{
 		public $vehicleid = "";
+		public $make = "";
 		public $model = "";
 		public $year = "";
 		public $vin = "";
 		public $miles = "";
+		public $price = "";
 		public $picdir = array();
 	}
 	
@@ -64,10 +66,12 @@
 						
 							$vehicle = new Vehicle();
 							$vehicle->vehicleid = $row[0];
-							$vehicle->model = $row[2];
-							$vehicle->year = $row[3];
-							$vehicle->vin = $row[4];
-							$vehicle->miles = $row[5];
+							$vehicle->make = $row[2];
+							$vehicle->model = $row[3];
+							$vehicle->year = $row[4];
+							$vehicle->vin = $row[5];
+							$vehicle->miles = $row[6];
+							$vehicle->price = $row[7];
 							//echo $row['fname'];
 							//$myJSON = json_encode($row);
 							//echo $myJSON;
