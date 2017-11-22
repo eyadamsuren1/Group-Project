@@ -224,4 +224,44 @@ function loadVehicles(param)
 
 var delete_cookie = function(name) {
     document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+}
+function uploadVehicle(){
+    var json = getCookie("userData");
+    console.log(json);
+    obj = JSON.parse(json);
+    var userID=obj.userid;
+    var vintage = document.getElementById("CarVinNumberAccount").value;
+    var model = document.getElementById("CarModelAccount").value;
+    var year = document.getElementById("CarYearAccount").value;
+    var miles = document.getElementById("CarMilesAccount").value;
+    var path="./../PHP/upload.php";
+    if(vintage == "" || model == ""|| year == ""|| miles == "") {
+        alert("Please Fill Out The Form Completely!");
+    } else {
+        $.ajax({
+            type: "POST",
+            url: path,
+            data: {
+                "model" : model,
+                "vintage" : vintage,
+                "miles" : miles,
+                "year" : year,
+                "ownerid" : userID
+            },
+            success: function(vehicleData) {
+                if(vehicleData== 'null' || vehicleData.includes('</br>'))
+                {
+                    alert("Your Email or Password is incorrect. Try Again!");
+                } else {
+                    alert("Success");
+                    console.log(vehicleData);
+                    setCookie("vehicleData", vehicleData);
+                    //window.location.href = "http://127.0.0.1/BookACar/user/user_index.html";
+                    //delete_cookie("userData");
+                    //console.log(getCookie("userData"));
+                }
+            }
+        });
+    }
+    document.getElementById("upload").reset();
 };
