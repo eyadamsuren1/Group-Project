@@ -16,11 +16,51 @@ header("Cache-Control: no-store, no-cache, must-revalidate");
 header("Cache-Control: post-check=0, pre-check=0", false);
 header("Pragma: no-cache");
 
+class Vehicle {
+		public $ownerid = "";
+		public $model = "";
+		public $year = "";
+		public $vin = "";
+		public $miles = "";
+	}
+class pic_dir{
+	public $path="";
+}
+$servername = "localhost";
+$username = "root";
+$password = "root";
+$database = "kacar";
+/*
+$dbc = mysqli_connect($servername, $username, $password, $database);
+
+            // Check connection
+            if (mysqli_connect_errno()) {
+                echo "Failed to connect to MySQL: " . mysqli_connect_error();
+            }
+            echo "Connected successfully";
+            */
+$conn=new mysqli($servername,$username,$password,$database);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 // Settings
 //$targetDir = ini_get("upload_tmp_dir") . DIRECTORY_SEPARATOR . "plupload";
-$targetDir = 'uploads';
-
-$cleanupTargetDir = true; // Remove old files
+$stmt=$conn->prepare("INSERT INTO vehicles(ownerid,model,year,vin,miles) VALUES (?,?,?,?,?)");
+$stmt->bind_param("isssi",$ownerid,$model,$year,$vin,$miles);
+$ownerid=trim($_POST['ownerid']);
+$vin=trim($_POST['vintage']);
+$miles=trim($_POST['miles']);
+$year=trim($_POST['year']);
+$model=trim($_POST['model']);
+$stmt->execute();
+$stmt->close();
+if ($conn->query($sql) === TRUE) {
+    $last_id = $conn->insert_id;
+    echo "New record created successfully. Last inserted ID is: " . $last_id;
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+$vehicleid=$last_id;
 $maxFileAge = 5 * 3600; // Temp file age in seconds
 
 // 5 minutes execution time
@@ -33,7 +73,12 @@ $maxFileAge = 5 * 3600; // Temp file age in seconds
 $chunk = isset($_REQUEST["chunk"]) ? intval($_REQUEST["chunk"]) : 0;
 $chunks = isset($_REQUEST["chunks"]) ? intval($_REQUEST["chunks"]) : 0;
 $fileName = isset($_REQUEST["name"]) ? $_REQUEST["name"] : '';
+$targetDir = $_SERVER["DOCUMENT_ROOT"]."/img".(string)$vehicleid."/".$_FILES['Filedata']['name'];
 
+if ( ! is_dir($target_Dir)) {
+    mkdir($target_Dir); 
+}  
+$cleanupTargetDir = true; // Remove old files
 // Clean the fileName for security reasons
 $fileName = preg_replace('/[^\w\._]+/', '_', $fileName);
 
@@ -53,8 +98,8 @@ if ($chunks < 2 && file_exists($targetDir . DIRECTORY_SEPARATOR . $fileName)) {
 $filePath = $targetDir . DIRECTORY_SEPARATOR . $fileName;
 
 // Create target dir
-if (!file_exists($targetDir))
-	@mkdir($targetDir);
+//if (!file_exists($targetDir))
+//	@mkdir($targetDir);
 
 // Remove old temp files	
 if ($cleanupTargetDir && is_dir($targetDir) && ($dir = opendir($targetDir))) {
@@ -124,9 +169,11 @@ if (!$chunks || $chunk == $chunks - 1) {
 	// Strip the temp .part suffix off 
 	rename("{$filePath}.part", $filePath);
 }
-
-
+$srmt=$conn->prepare("INSERT INTO pic_dir(vehicleid,directory) VALUES (?,?)");
+$srmt->bind_param("is",$vehicleid,$filePath);
+$srmt->execute();
+$srmt->close();
 // Return JSON-RPC response
 die('{"jsonrpc" : "2.0", "result" : null, "id" : "id"}');
-
+$conn->close();
 ?>
