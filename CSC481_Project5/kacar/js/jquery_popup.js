@@ -105,10 +105,7 @@ $(document).ready(function() {
                     miles = obj[i].miles;
                     vin = obj[i].vin;
                 }
-
-
             }
-
 
             $(".photobox-image-content").html(
                 ("<b>Make: </b>" + make)+
@@ -270,14 +267,16 @@ $(document).ready(function() {
     $("#profileImage").click(function(e) {
         $("#imageUpload").click();
     });
+    $(".middle").click(function(e) {
+        $("#imageUpload").click();
+    });
 
     function fasterPreview( uploader ) {
         if ( uploader.files && uploader.files[0] ){
               $('#profileImage').attr('src', 
-                 window.URL.createObjectURL(uploader.files[0]) );
+                 window.URL.createObjectURL(uploader.files[0]));
         }
     }
-
     $("#imageUpload").change(function(){
         fasterPreview( this );
     });

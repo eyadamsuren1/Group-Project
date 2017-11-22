@@ -128,18 +128,15 @@ function checkCookie() {
     }
 }
 
-function loadVehicles(param)
-{
+function loadVehicles(param) {
     //var email = document.getElementById("email_address").value;
     //var password = document.getElementById("password").value;
     
     var path = "";
 
-    if(param == 'unlogged')
-    {
+    if(param == 'unlogged') {
         path = "./PHP/loadVehicles.php"
-    } else 
-    {
+    } else {
         path = "./../PHP/loadVehicles.php"
     }
 
@@ -208,18 +205,12 @@ function loadVehicles(param)
             p.innerHTML = "$" + obj[i].price + " Per Day";
             currentElement.appendChild(div);
             div.appendChild(p);
-            
         }
-
-
-
-
 
         //document.createAttribute("photoboxsrc").value = temp[0];
         //document.getElementById("samplePic").src = temp[0];
         //alert(temp[0]);
 
-	
 }
 
 var delete_cookie = function(name) {
