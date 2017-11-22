@@ -343,12 +343,17 @@ header a:hover {
   margin-bottom: 5px;
 }
 #search input[type="search"] {
-  border: 1px solid #333;
+  width: 100%;
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
 }
 #newsletter input[type="email"] {
   padding: 4px;
-  height: 25px;
+  height: 30px;
   width: 250px;
+  border: none;
+  border-radius: 5px;
 }
 /* Sidebar */
 aside#sidebar {
@@ -358,11 +363,14 @@ aside#sidebar {
 }
 aside#sidebar .quote input, aside#sidebar .quote textarea {
   width: 90%;
-  padding: 5px;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 3px;
+  border: none;
 }
 /* Main-col */
 article#main-col {
-  margin: 5px 10px;
+  margin: 5px 15px;
   float: left;
   width: 65%;
 }
@@ -399,7 +407,7 @@ footer {
     display: block;
     width: 100%;
   }
-  #newsletter form input[type="email"], .quote input, .quote textarea {
+  #newsletter form input[type="email"], .quote input {
     width: 100%;
     margin-bottom: 5px;
   }
@@ -489,7 +497,7 @@ h4 {
 textarea {
   margin-top: 5px;
   height: 150px;
-  padding: 5px;
+  resize: none;
 }
 .main_table {
   margin: auto;
@@ -711,10 +719,25 @@ textarea {
   border: 1px dashed black;
   background: #ededed;
 }
-.vehicle_info {
+.vehicle_info, .account_info {
   float: left;
   width: 70%;
   padding-right: 20px;
+}
+.vehicle_info p {
+  font-weight: bold;
+}
+/*
+.account_info p {
+  font-weight: bold;
+}
+*/
+.vehicle_info input, .account_info input {
+  border-radius: 5px;
+  background: #ededed;
+  padding: 5px; 
+  border: none;
+  margin-left: 10px;
 }
 /* Clear Floats */
 .upload-form .cb {
@@ -877,7 +900,6 @@ textarea {
   width: 70%;
   padding-right: 20px;
 }
-
 #error {
   display: none;
   width: 100%; 
