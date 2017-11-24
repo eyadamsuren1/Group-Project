@@ -45,7 +45,25 @@
                 echo "Failed to connect to MySQL: " . mysqli_connect_error();
             }
             echo "Connected successfully";
-            	
+            
+            $query1 = "SELECT * FROM Kacar.user WHERE user.email ='" . $_POST['email']."' ";
+			if($rowcount !=0)
+			{
+				echo "User Already Exists";
+				break;
+			}
+			else
+			{
+				$query2 = "INSERT INTO user (fname, lname, email, password) VALUES ('".$fname."','".$lname."', '".$email."', '".$password."')";
+				if($dbc->query($query2) === TRUE) {
+						echo 'New User Created';
+				}
+				else {
+                echo 'Error Occurred<br />';
+                echo mysqli_error();
+				}
+				$result->free();
+/*			}
             $query = "INSERT INTO user (fname, lname, email, password)
             VALUES ('".$fname."','".$lname."', '".$email."', '".$password."')";
             if($dbc->query($query) === TRUE) {
@@ -53,7 +71,7 @@
             } else {
                 echo 'Error Occurred<br />';
                 echo mysqli_error();
-            }
+            }*/
         } else {
             echo 'You need to enter the following data<br />';
             foreach($data_missing as $missing) {
