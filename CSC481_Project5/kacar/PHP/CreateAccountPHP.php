@@ -63,8 +63,8 @@
                 echo mysqli_error();
 				}
 				$result->free();
-/*			}
-            $query = "INSERT INTO user (fname, lname, email, password)
+			}
+/*            $query = "INSERT INTO user (fname, lname, email, password)
             VALUES ('".$fname."','".$lname."', '".$email."', '".$password."')";
             if($dbc->query($query) === TRUE) {
                 echo 'New User Created';
