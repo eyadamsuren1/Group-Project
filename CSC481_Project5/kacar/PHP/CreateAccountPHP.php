@@ -55,7 +55,7 @@
 			}
 			else
 			{
-				$query2 = "INSERT INTO user (fname, lname, email, password, renter_status) VALUES ('".$fname."','".$lname."', '".$email."', '".$password."', '')";
+				$query2 = "INSERT INTO kacar.user (fname, lname, email, password, renter_status) VALUES ('".$fname."','".$lname."', '".$email."', '".$password."', '')";
 				if($dbc->query($query2) === TRUE) {
 						echo 'New User Created';
 				
