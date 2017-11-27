@@ -12,15 +12,19 @@ function SignUp() {
 			type: "POST",
 			url: "./PHP/CreateAccountPHP.php",
 			data: {
+				"fname": fname,
+            			"lname": lname,
 				"email" : email,
-				"password" : password
+				"password" : password,
+             			"submit": true
 			},
 			success: function(userData) {
-                if(userData == 'null')
+                if(userData === '')
                 {
                     alert("Your Email or Password is incorrect. Try Again!");
                 } else {
-                    alert("Success");
+         //           alert("Success");
+		    alert(userData);
                     console.log(userData);
                     setCookie("userData", userData);
                     window.location.href = "http://127.0.0.1/BookACar/user/user_index.html";
