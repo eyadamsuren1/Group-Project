@@ -23,8 +23,8 @@ function SignUp() {
                 {
                     alert("Your Email or Password is incorrect. Try Again!");
                 } else {
-         //           alert("Success");
-		    alert(userData);
+                    alert("Success");
+	//	    alert(userData);
                     console.log(userData);
                     setCookie("userData", userData);
                     window.location.href = "http://127.0.0.1/BookACar/user/user_index.html";
