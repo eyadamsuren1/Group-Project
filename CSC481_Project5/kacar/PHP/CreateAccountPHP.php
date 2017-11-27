@@ -47,16 +47,18 @@
             echo "Connected successfully";
             
             $query1 = "SELECT * FROM Kacar.user WHERE user.email ='" . $_POST['email']."' ";
-			if($rowcount !=0)
+		$result = $dbc->query($query1);	
+			if($result->$num_rows > 0)
 			{
 				echo "User Already Exists";
 				break;
 			}
 			else
 			{
-				$query2 = "INSERT INTO user (fname, lname, email, password) VALUES ('".$fname."','".$lname."', '".$email."', '".$password."')";
+				$query2 = "INSERT INTO user (fname, lname, email, password, renter_status) VALUES ('".$fname."','".$lname."', '".$email."', '".$password."', '')";
 				if($dbc->query($query2) === TRUE) {
 						echo 'New User Created';
+				
 				}
 				else {
                 echo 'Error Occurred<br />';
