@@ -66,14 +66,7 @@
 				}
 				$result->free();
 			}
-/*            $query = "INSERT INTO user (fname, lname, email, password)
-            VALUES ('".$fname."','".$lname."', '".$email."', '".$password."')";
-            if($dbc->query($query) === TRUE) {
-                echo 'New User Created';
-            } else {
-                echo 'Error Occurred<br />';
-                echo mysqli_error();
-            }*/
+
         } else {
             echo 'You need to enter the following data<br />';
             foreach($data_missing as $missing) {
