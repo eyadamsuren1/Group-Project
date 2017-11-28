@@ -130,7 +130,8 @@
 										'<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">',
 										'<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">',
 										'</form>',
-									'<button class="photobox-book">Book</button><button class="photobox-cancel">Cancel</button>',
+				//					'<button class="photobox-book">Book</button>
+				    					<button class="photobox-cancel">Cancel</button>',
 									'<div style="clear:both"></div>',
 								'</div>',
 							'</div>',
