@@ -53,14 +53,17 @@ $miles=trim($_POST['miles']);
 $year=trim($_POST['year']);
 $model=trim($_POST['model']);
 $stmt->execute();
-$stmt->close();
+$last_id=$stmt->insert_id;
+/*
 if ($conn->query($sql) === TRUE) {
     $last_id = $conn->insert_id;
     echo "New record created successfully. Last inserted ID is: " . $last_id;
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
-$vehicleid=$last_id;
+*/
+$vehicleid=trim((string)$last_id);
+echo $vehicleid;
 $maxFileAge = 5 * 3600; // Temp file age in seconds
 
 // 5 minutes execution time
@@ -73,11 +76,26 @@ $maxFileAge = 5 * 3600; // Temp file age in seconds
 $chunk = isset($_REQUEST["chunk"]) ? intval($_REQUEST["chunk"]) : 0;
 $chunks = isset($_REQUEST["chunks"]) ? intval($_REQUEST["chunks"]) : 0;
 $fileName = isset($_REQUEST["name"]) ? $_REQUEST["name"] : '';
-$targetDir = $_SERVER["DOCUMENT_ROOT"]."/img".(string)$vehicleid."/".$_FILES['Filedata']['name'];
+echo $fileName;
+/* 
+$fileName = preg_replace('/[^\w\._]+/', '_', $fileName);
+$targetDir = $_SERVER["DOCUMENT_ROOT"]."/img/"."/$vehicleid/"."/$fileName";
 
 if ( ! is_dir($target_Dir)) {
     mkdir($target_Dir); 
-}  
+}
+if( $_FILES['Filedata']['error'] == 0 ){
+    if( move_uploaded_file( $_FILES['Filedata']['tmp_name'],
+         $target_dir ) ){
+    }
+}
+$filePath = $targetDir . DIRECTORY_SEPARATOR . $fileName;
+
+*/
+$targetDir="../img/".$vehicleid;
+if ( ! is_dir($targetDir)) {
+    mkdir($targetDir); 
+}
 $cleanupTargetDir = true; // Remove old files
 // Clean the fileName for security reasons
 $fileName = preg_replace('/[^\w\._]+/', '_', $fileName);
@@ -96,6 +114,7 @@ if ($chunks < 2 && file_exists($targetDir . DIRECTORY_SEPARATOR . $fileName)) {
 }
 
 $filePath = $targetDir . DIRECTORY_SEPARATOR . $fileName;
+echo $filePath;
 
 // Create target dir
 //if (!file_exists($targetDir))
@@ -169,11 +188,20 @@ if (!$chunks || $chunk == $chunks - 1) {
 	// Strip the temp .part suffix off 
 	rename("{$filePath}.part", $filePath);
 }
+$folder =  "../img/$vehicleid/$fileName";
+if ( ! is_dir($folder)) {
+    mkdir($folder); 
+}  
+move_uploaded_file($fileName, $folder);
+$imgPath=$folder . DIRECTORY_SEPARATOR . $fileName;
+$fPath=(string)$imgPath;
 $srmt=$conn->prepare("INSERT INTO pic_dir(vehicleid,directory) VALUES (?,?)");
-$srmt->bind_param("is",$vehicleid,$filePath);
+$srmt->bind_param("is",$vehicleid,$fPath);
 $srmt->execute();
 $srmt->close();
+$stmt->close();
 // Return JSON-RPC response
 die('{"jsonrpc" : "2.0", "result" : null, "id" : "id"}');
 $conn->close();
+
 ?>
