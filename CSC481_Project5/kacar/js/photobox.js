@@ -124,6 +124,12 @@
 									'<div style="clear:both"></div>',
 								'</div>',
 								'<div class="photobox-container-bottom">',
+				  						'<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">'
+										'<input type="hidden" name="cmd" value="_s-xclick">'
+										'<input type="hidden" name="hosted_button_id" value="ZPJF4UA8DESYG">'
+										'<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">'
+										'<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">'
+										'</form>'
 									'<button class="photobox-book">Book</button><button class="photobox-cancel">Cancel</button>',
 									'<div style="clear:both"></div>',
 								'</div>',
