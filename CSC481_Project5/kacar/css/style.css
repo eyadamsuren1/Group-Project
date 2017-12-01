@@ -735,9 +735,9 @@ textarea {
 .vehicle_info input, .account_info input {
   border-radius: 5px;
   background: #ededed;
-  padding: 5px; 
+  padding: 4px; 
   border: none;
-  margin-left: 10px;
+  margin-left: 5px;
 }
 /* Clear Floats */
 .upload-form .cb {
@@ -877,7 +877,7 @@ textarea {
 #profile-container {
   position: relative;
   float: left;
-  margin: 30px 0px 45px 0px;
+  margin: 10px 0px 10px 0px;
   width: 150px;
   height: 150px;
   overflow: hidden;
