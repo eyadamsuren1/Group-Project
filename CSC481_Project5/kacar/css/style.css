@@ -757,6 +757,9 @@ textarea {
   float: left;
   width: 60%;
 }
+.account_info p {
+	margin-left: 15px;
+}
 .vehicle_info p {
   font-weight: bold;
   display: inline-block;
