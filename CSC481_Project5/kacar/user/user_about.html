@@ -46,54 +46,56 @@
                 <form action="#">
                     <h4>Account Information</h4>
                     <div class="account_info">
-                      <p><b>First Name: </b></p><p id="firstNameAccount" contenteditable="true"></p><br>
-                      <p><b>Last Name: </b></p><p id="lastNameAccount" contenteditable="true"></p><br>
-                      <p><b>Email Address: </b></p><p id="emailAccount" contenteditable="true"></p><br>
-                      <p><b>Phone Number: </b></p><p id="phoneNumberAccount" contenteditable="true"></p><br>
-                      <p><b>Address: </b></p><p id="addressAccount" contenteditable="true"></p><br>
-                      <!--
-                      <p>First Name: &nbsp;</p><input type="text" id="firstNameAccount" placeholder="First Name"><br>
-                      <p>Last Name: &nbsp;</p><input type="text" id="lastNameAccount" placeholder="Last Name"><br>
-                      <p>Email Address: &nbsp;</p><input type="text" id="emailAccount" placeholder="Email Address"><br>
-                      <p>Phone Number: &nbsp;</p><input type="text" id="phoneNumberAccount" placeholder="Phone Number"><br>
-                      <p>Address: &nbsp;</p><input type="text" id="addressAccount" placeholder="Address"><br>
-                      -->
+                      <p><b>First Name: </b></p><p id="firstNameAccount" class="editable"></p><br>
+                      <p><b>Last Name: </b></p><p id="lastNameAccount" class="editable"></p><br>
+                      <p><b>Email Address: </b></p><p id="emailAccount" class="editable"></p><br>
+                      <p><b>Phone Number: </b></p><p id="phoneNumberAccount" class="editable"></p><br>
+                      <p><b>Address: </b></p><p id="addressAccount" class="editable"></p><br>
                     </div>
-                    <div id="profile-container">
-                      <image id="profileImage" src="../img/icons/profile_picture.png" />
-                        <div class="middle">UPDATE</div>
+                    <div class="side-booker-division">
+                      <div id="profile-container">
+                        <image id="profileImage" src="../img/icons/profile_picture.png" />
+                          <div class="middle">UPDATE</div>
+                      </div>
+                      <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture>
+                      <button class='close_button'>Close</button>
+                      <button class='panel_1_button'>Update</button>
                     </div>
-                    <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture>
-                    <button class='close_button'>Close</button>
-                    <button class='panel_1_button'>Update</button>
                 </form>
               </div>
               <div id="panel_2" class="tab">
                 <form action="#" id="upload">
                   <h4>Vehicle Information</h4>
                   <div class="vehicle_info">
-                    <p>Make: &nbsp;</p><input type="text" id="CarMakeAccount" placeholder="Make"><br>
-                    <p>Model: &nbsp;</p><input type="text" id="CarModelAccount" placeholder="Model"><br>
-                    <p>Year: &nbsp;</p><input type="text" id="CarYearAccount" placeholder="Year"><br>
-                    <p>Vin Number: &nbsp;</p><input type="text" id="CarVinNumberAccount" placeholder="Vin Number"><br>
-                    <p>Miles: &nbsp;</p><input type="text" id="CarMilesAccount" placeholder="Miles"><br>
-                    <p>Price: &nbsp;</p><input type="text" id="CarPriceAccount" placeholder="Price"><br>
-                  </div>
-                  <div class="upload-form" id="uploader">
-                    <!-- Select & Upload Button -->
-                    <div>
-                      <a class="button" id="pickfiles" href="#">Choose File</a>
-                      <!-- id="uploadfiles" ***Upload*** -->
+                      <p>Make: &nbsp;</p><input type="text" id="CarMakeAccount" placeholder="Make"><br>
+                      <p>Model: &nbsp;</p><input type="text" id="CarModelAccount" placeholder="Model"><br>
+                      <p>Year: &nbsp;</p><input type="text" id="CarYearAccount" placeholder="Year"><br>
+                      <p>Vin Number: &nbsp;</p><input type="text" id="CarVinNumberAccount" placeholder="Vin Number"><br>
+                      <p>Miles: &nbsp;</p><input type="text" id="CarMilesAccount" placeholder="Miles"><br>
+                      <p>Price: &nbsp;</p><input type="text" id="CarPriceAccount" placeholder="Price"><br>
                     </div>
-                    <!-- File List -->
-                    <div id="filelist" class="cb"></div>
-                    <!-- Progress Bar -->
-                    <div id="progressbar"></div>
-                  </div>
-                  <button class='close_button'>Close</button>
-                  <button class='panel_2_button' id="uploadfiles" onclick="uploadVehicle()">Upload</button>
+                    <div class="side-renter-division">
+                      <div class="availability_div">
+                        <h4>Availability</h4>
+                        <p>From: &nbsp;</p><input type="date" id="CarFromDateAccount"><br>
+                        <p>To: &nbsp;</p><input type="date" id="CarToDateAccount"><br>
+                      </div>
+                      <div class="upload-form" id="uploader">
+                        <!-- Select & Upload Button -->
+                        <div>
+                          <a class="button" id="pickfiles" href="#">Choose File</a>
+                          <!-- id="uploadfiles" ***Upload*** -->
+                        </div>
+                        <!-- File List -->
+                        <div id="filelist" class="cb"></div>
+                        <!-- Progress Bar -->
+                        <div id="progressbar"></div>
+                      </div>
+                      <button class='close_button'>Close</button>
+                      <button class='panel_2_button' id="uploadfiles" onclick="uploadVehicle()">Upload</button>
+                    </div>
                 </form>
-              </div> 
+              </div>
             </div>
           </div>
         </div>

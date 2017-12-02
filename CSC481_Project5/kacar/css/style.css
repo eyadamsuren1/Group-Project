@@ -693,6 +693,14 @@ textarea {
   margin-top: 10px;
   margin-bottom: 15px;
 }
+.side-renter-division {
+  float: right;
+  width: 50%;
+}
+.side-booker-division {
+  float: right;
+  width: 40%;
+}
 /* Reset */
 .upload-form,
 .upload-form div,
@@ -704,14 +712,36 @@ textarea {
   margin: 0;
   outline: none;
 }
+.availability_div {
+  float: right;
+  width: 60%;
+  border-radius: 3px;
+  border: 1px dashed black;
+  background: #ededed;
+
+  padding: 0px 20px 10px 20px;
+  margin: 0px 0px 10px 0px;
+}
+.availability_div h4 {
+  font-size: 15px;
+  margin: 0px;
+}
+.availability_div p {
+  font-weight: bold;
+  font-size: 14px;
+  display: inline-block;
+  width: 45px;
+  text-align: right;
+  margin: 0px;
+}
 /* Form Container */
 .upload-form {
-  float: left;
+  float: right;
+  width: 60%;
   position: relative;
   z-index: 100;
   cursor: default;
-  width: 20%;
-  min-height: 160px;
+  min-height: 120px;
   padding: 0px 20px 10px 20px;
   margin: 0px 0px 10px 0px;
 
@@ -719,13 +749,20 @@ textarea {
   border: 1px dashed black;
   background: #ededed;
 }
-.vehicle_info, .account_info {
+.vehicle_info {
   float: left;
-  width: 70%;
-  padding-right: 20px;
+  width: 50%;
+}
+.account_info {
+  float: left;
+  width: 60%;
 }
 .vehicle_info p {
   font-weight: bold;
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+  margin: 0px;
 }
 /*
 .account_info p {
@@ -876,8 +913,9 @@ textarea {
 }
 #profile-container {
   position: relative;
-  float: left;
-  margin: 10px 0px 10px 0px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
   width: 150px;
   height: 150px;
   overflow: hidden;
@@ -917,11 +955,6 @@ textarea {
 }
 #profile-container:hover .middle {
   opacity: 1;
-}
-.account_info {
-  float: left;
-  width: 70%;
-  padding-right: 20px;
 }
 #error {
   display: none;
