@@ -25,10 +25,12 @@ DROP TABLE IF EXISTS `Vehicles`;
 CREATE TABLE `Vehicles` (
   `vehicleid` int(11) NOT NULL AUTO_INCREMENT,
   `ownerid` int(11) NOT NULL,
+  `make` varchar(45) NOT NULL,
   `model` varchar(45) NOT NULL,
   `year` varchar(45) NOT NULL,
   `vin` varchar(45) NOT NULL,
   `miles` int(11) NOT NULL,
+  `price` int(11) NOT NULL,
   PRIMARY KEY (`vehicleid`),
   UNIQUE KEY `vin_UNIQUE` (`vin`),
   KEY `ownerid_idx` (`ownerid`),
