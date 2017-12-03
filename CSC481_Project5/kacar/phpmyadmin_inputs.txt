@@ -1,34 +1,44 @@
 
 //for vehicles
-INSERT INTO `vehicles`(`vehicleid`, `ownerid`, `make`, `model`, `year`, `vin`, `miles`, `price`) VALUES (1,1,'Ford','Mustang','2017','KNAFT4A24B5324483',10000,50);
-INSERT INTO `vehicles`(`vehicleid`, `ownerid`, `make`, `model`, `year`, `vin`, `miles`, `price`) VALUES (2,1,'Honda','Civic','2015','1FTRF18W41NA79732',25000,35);
-INSERT INTO `vehicles`(`vehicleid`, `ownerid`, `make`, `model`, `year`, `vin`, `miles`, `price`) VALUES (3,2,'Ford','F-150','2016','1FV3HFBA2VL612497',20000,65)
+INSERT INTO `vehicles`(`vehicleid`, `ownerid`, `make`, `model`, `year`, `vin`, `miles`, `price`) VALUES (1,1,'BMW','3 Series 335i','2008','KNAFT4A24B5324483',10000,51);
+INSERT INTO `vehicles`(`vehicleid`, `ownerid`, `make`, `model`, `year`, `vin`, `miles`, `price`) VALUES (2,1,'Subaru','Legacy','2007','1FTRF18W41NA79732',25000,37);
+INSERT INTO `vehicles`(`vehicleid`, `ownerid`, `make`, `model`, `year`, `vin`, `miles`, `price`) VALUES (3,2,'Honda','Fiat','2012','1FV3HFBA2VL612497',20000,35);
+INSERT INTO `vehicles`(`vehicleid`, `ownerid`, `make`, `model`, `year`, `vin`, `miles`, `price`) VALUES (4,3,'Toyota','4Runner','2006','1GKET12S456261108',5503,43);
+INSERT INTO `vehicles`(`vehicleid`, `ownerid`, `make`, `model`, `year`, `vin`, `miles`, `price`) VALUES (5,4,'Toyota','Corolla','2016','3GCUKREH2EG405648',2503,49);
+INSERT INTO `vehicles`(`vehicleid`, `ownerid`, `make`, `model`, `year`, `vin`, `miles`, `price`) VALUES (6,5,'Toyota','Yaris','2016','2GDGG35N8L4595988',1503,42)
 
 
 //for pic_dir
-INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (1,'./img/1/mustang1.png');
-INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (1,'./img/1/mustang2.png');
-INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (1,'./img/1/mustang3.png');
-INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (1,'./img/1/mustang4.png');
-INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (2,'./img/2/civic1.png');
-INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (2,'./img/2/ford1.png');
-INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (3,'./img/3/f2.png');
-INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (3,'./img/3/f3.png');
-INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (3,'./img/3/f4.png');
-INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (3,'./img/3/f5.png')
-
-
-
-
-INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (1,'./img/1/honda_fit_hybrid_1.png');
-INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (1,'./img/1/honda_fit_hybrid_2.png');
-INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (1,'./img/1/honda_fit_hybrid_3.png');
-INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (1,'./img/1/honda_fit_hybrid_4.png');
-INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (1,'./img/1/honda_fit_hybrid_5.png');
-INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (2,'./img/2/specb_forsale_01.png');
-INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (2,'./img/2/specb_forsale_02.png');
-INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (2,'./img/2/specb_forsale_03.png');
-INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (2,'./img/2/specb_forsale_04.png')
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (1,'./img/1/P1020034.jpg');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (1,'./img/1/P1020035.jpg');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (1,'./img/1/P1020036.jpg');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (1,'./img/1/P1020037.jpg');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (1,'./img/1/P1020038.jpg');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (1,'./img/1/P1020039.jpg');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (2,'./img/2/specb_forsale_01.jpg');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (2,'./img/2/specb_forsale_02.jpg');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (2,'./img/2/specb_forsale_03.jpg');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (2,'./img/2/specb_forsale_04.jpg');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (3,'./img/3/honda_fit_hybrid_1.jpg');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (3,'./img/3/honda_fit_hybrid_2.jpg');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (3,'./img/3/honda_fit_hybrid_3.jpg');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (3,'./img/3/honda_fit_hybrid_4.jpg');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (3,'./img/3/honda_fit_hybrid_5.jpg');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (4,'./img/4/4runner_1.jpg');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (4,'./img/4/4runner_2.jpg');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (4,'./img/4/4runner_3.jpg');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (4,'./img/4/4runner_4.jpg');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (5,'./img/5/IMG_1181.jpg');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (5,'./img/5/IMG_1182.jpg');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (5,'./img/5/IMG_1185.jpg');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (5,'./img/5/IMG_1186.jpg');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (5,'./img/5/IMG_1187.jpg');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (6,'./img/6/yaris_327421.jpg');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (6,'./img/6/yaris_327422.jpg');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (6,'./img/6/yaris_327423.jpg');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (6,'./img/6/yaris_327424.jpg');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (6,'./img/6/yaris_327425.jpg');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (6,'./img/6/yaris_327426.jpg')
 
 
 
