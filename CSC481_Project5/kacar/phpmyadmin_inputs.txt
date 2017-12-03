@@ -1,0 +1,47 @@
+
+//for vehicles
+INSERT INTO `vehicles`(`vehicleid`, `ownerid`, `make`, `model`, `year`, `vin`, `miles`, `price`) VALUES (1,1,'Ford','Mustang','2017','KNAFT4A24B5324483',10000,50);
+INSERT INTO `vehicles`(`vehicleid`, `ownerid`, `make`, `model`, `year`, `vin`, `miles`, `price`) VALUES (2,1,'Honda','Civic','2015','1FTRF18W41NA79732',25000,35);
+INSERT INTO `vehicles`(`vehicleid`, `ownerid`, `make`, `model`, `year`, `vin`, `miles`, `price`) VALUES (3,2,'Ford','F-150','2016','1FV3HFBA2VL612497',20000,65)
+
+
+//for pic_dir
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (1,'./img/1/mustang1.png');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (1,'./img/1/mustang2.png');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (1,'./img/1/mustang3.png');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (1,'./img/1/mustang4.png');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (2,'./img/2/civic1.png');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (2,'./img/2/ford1.png');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (3,'./img/3/f2.png');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (3,'./img/3/f3.png');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (3,'./img/3/f4.png');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (3,'./img/3/f5.png')
+
+
+
+
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (1,'./img/1/honda_fit_hybrid_1.png');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (1,'./img/1/honda_fit_hybrid_2.png');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (1,'./img/1/honda_fit_hybrid_3.png');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (1,'./img/1/honda_fit_hybrid_4.png');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (1,'./img/1/honda_fit_hybrid_5.png');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (2,'./img/2/specb_forsale_01.png');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (2,'./img/2/specb_forsale_02.png');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (2,'./img/2/specb_forsale_03.png');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (2,'./img/2/specb_forsale_04.png')
+
+
+
+
+// for users
+INSERT INTO `user`(`userid`, `fname`, `lname`, `email`, `password`, `renter_status`, `profile_pic_dir`) VALUES (NULL,'Mangar','Teneg','mangar@yahoo.com','password','1',NULL);
+INSERT INTO `user`(`userid`, `fname`, `lname`, `email`, `password`, `renter_status`, `profile_pic_dir`) VALUES (NULL,'Lindsay','Mason','lindsay_mason@yahoo.com','password','1',NULL);
+INSERT INTO `user`(`userid`, `fname`, `lname`, `email`, `password`, `renter_status`, `profile_pic_dir`) VALUES (NULL,'Abel','Moss','abel_moss@yahoo.com','password','1',NULL);
+INSERT INTO `user`(`userid`, `fname`, `lname`, `email`, `password`, `renter_status`, `profile_pic_dir`) VALUES (NULL,'Sergio','Jones','sergio_jones@yahoo.com','password','1',NULL);
+INSERT INTO `user`(`userid`, `fname`, `lname`, `email`, `password`, `renter_status`, `profile_pic_dir`) VALUES (NULL,'Judy','Klein','judy_klein@yahoo.com','password','1',NULL);
+INSERT INTO `user`(`userid`, `fname`, `lname`, `email`, `password`, `renter_status`, `profile_pic_dir`) VALUES (NULL,'Dallas','Francis','dallas_francis@yahoo.com','password','1',NULL);
+INSERT INTO `user`(`userid`, `fname`, `lname`, `email`, `password`, `renter_status`, `profile_pic_dir`) VALUES (NULL,'Dean','Watson','dean_watson@yahoo.com','password','1',NULL);
+INSERT INTO `user`(`userid`, `fname`, `lname`, `email`, `password`, `renter_status`, `profile_pic_dir`) VALUES (NULL,'Maureen','West','maureen_west@yahoo.com','password','1',NULL);
+INSERT INTO `user`(`userid`, `fname`, `lname`, `email`, `password`, `renter_status`, `profile_pic_dir`) VALUES (NULL,'Raul','Bush','raul_bush@yahoo.com','password','1',NULL);
+INSERT INTO `user`(`userid`, `fname`, `lname`, `email`, `password`, `renter_status`, `profile_pic_dir`) VALUES (NULL,'Jan','Bush','jan_tucker@yahoo.com','password','1',NULL);
+INSERT INTO `user`(`userid`, `fname`, `lname`, `email`, `password`, `renter_status`, `profile_pic_dir`) VALUES (NULL,'Constance','Strickland','constance_strickland@yahoo.com','password','1',NULL)
