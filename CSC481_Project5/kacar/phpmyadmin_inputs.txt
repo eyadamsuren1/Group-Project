@@ -5,9 +5,9 @@ INSERT INTO `vehicles`(`vehicleid`, `ownerid`, `make`, `model`, `year`, `vin`, `
 INSERT INTO `vehicles`(`vehicleid`, `ownerid`, `make`, `model`, `year`, `vin`, `miles`, `price`) VALUES (3,2,'Honda','Fiat','2012','1FV3HFBA2VL612497',20000,35);
 INSERT INTO `vehicles`(`vehicleid`, `ownerid`, `make`, `model`, `year`, `vin`, `miles`, `price`) VALUES (4,3,'Toyota','4Runner','2006','1GKET12S456261108',5503,43);
 INSERT INTO `vehicles`(`vehicleid`, `ownerid`, `make`, `model`, `year`, `vin`, `miles`, `price`) VALUES (5,4,'Toyota','Corolla','2016','3GCUKREH2EG405648',2503,49);
-INSERT INTO `vehicles`(`vehicleid`, `ownerid`, `make`, `model`, `year`, `vin`, `miles`, `price`) VALUES (6,5,'Toyota','Yaris','2016','2GDGG35N8L4595988',1503,42)
-
-
+INSERT INTO `vehicles`(`vehicleid`, `ownerid`, `make`, `model`, `year`, `vin`, `miles`, `price`) VALUES (6,5,'Toyota','Yaris','2016','2GDGG35N8L4595988',1503,42);
+INSERT INTO `vehicles`(`vehicleid`, `ownerid`, `make`, `model`, `year`, `vin`, `miles`, `price`) VALUES (7,6,'Mercedes Benz','320SL Convertible Roadster','1997','3GCUKSE20CG267091',111503,39)
+1997 MERCEDES-BENZ 
 //for pic_dir
 INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (1,'./img/1/P1020034.jpg');
 INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (1,'./img/1/P1020035.jpg');
@@ -38,7 +38,10 @@ INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (6,'./img/6/yaris_327422.
 INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (6,'./img/6/yaris_327423.jpg');
 INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (6,'./img/6/yaris_327424.jpg');
 INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (6,'./img/6/yaris_327425.jpg');
-INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (6,'./img/6/yaris_327426.jpg')
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (6,'./img/6/yaris_327426.jpg');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (7,'./img/7/mercedes_1.jpg');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (7,'./img/7/mercedes_2.jpg');
+INSERT INTO `pic_dir`(`vehicleid`, `directory`) VALUES (7,'./img/7/mercedes_3.jpg')
 
 
 
