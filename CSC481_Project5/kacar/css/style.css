@@ -971,3 +971,42 @@ textarea {
 #error p {
   margin: 0px;
 }
+/*Search Button*/
+.search-box-wrapper {
+  display: inline-flex;
+  font-size: 17px;
+  width: 95%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 5%;
+}
+.search-box-input {
+  width: 100%;
+  font-size: inherit;
+  border: 1px solid #ffffff;
+  border-radius: 0.5em 0 0 0.5em;
+  padding: 0.2em 0.9em;
+  outline: 0;
+}
+.search-box-input:hover,
+.search-box-input:focus {
+  border-color: #a3a3a3;
+}
+.search-box-button {
+  font-size: inherit;
+  border: 0.2em solid #ffffff;
+  border-radius: 0 0.5em 0.5em 0;
+  background-color: #ffffff;
+  border-left: 0;
+  padding: 0 0.75em;
+  color: white;
+  font-weight: bold;
+  outline: 0;
+  cursor: pointer;
+  margin-right: 5%; 
+}
+.search-box-button:hover,
+.search-box-button:focus {
+  border-color: #a3a3a3;
+  background-color: #a3a3a3;
+}
