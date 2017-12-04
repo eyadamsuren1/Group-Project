@@ -111,6 +111,7 @@ $(document).ready(function() {
             }
 
             $(".photobox-image-content").html(
+            	("<center><b>Vehicle Information</b></center>")+
                 ("<b>Make: </b>" + make)+
             	("<br><b>Model: </b>" + model)+
             	("<br><b>Year: </b>" + year)+
