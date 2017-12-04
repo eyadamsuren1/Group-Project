@@ -335,19 +335,6 @@ header a:hover {
   float: right;
   margin-top: 15px;
 }
-#search form {
-  margin: auto;
-  width: 90%;
-  padding: 7px;
-  margin-top: 30px;
-  margin-bottom: 5px;
-}
-#search input[type="search"] {
-  width: 100%;
-  border: none;
-  border-radius: 3px;
-  padding: 10px;
-}
 #newsletter input[type="email"] {
   padding: 4px;
   height: 30px;
