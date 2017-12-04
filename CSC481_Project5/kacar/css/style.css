@@ -963,8 +963,8 @@ textarea {
   display: inline-flex;
   font-size: 17px;
   width: 95%;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   margin-left: 5%;
 }
 .search-box-input {
