@@ -158,35 +158,33 @@ $(document).ready(function() {
 	    }, 'slow');
 	    return false;
 	});
-    //Loop through all Labels with class 'editable'.
-    $(".editable").each(function () {
-        //Reference the Label.
-        var label = $(this);
-        //Add a TextBox next to the Label.
-        label.after("<input type = 'text' style = 'display:none' />");
-        //Reference the TextBox.
-        var textbox = $(this).next();
- 
-        //Set the name attribute of the TextBox.
-        var id = this.id.split('_')[this.id.split('_').length - 1];
-        textbox[0].name = id.replace("lbl", "txt");
- 
-        //Assign the value of Label to TextBox.
-        textbox.val(label.html());
- 
-        //When Label is clicked, hide Label and show TextBox.
-        label.click(function () {
-            $(this).hide();
-            $(this).next().show();
-        });
- 
-        //When focus is lost from TextBox, hide TextBox and show Label.
-        textbox.focusout(function () {
-            $(this).hide();
-            $(this).prev().html($(this).val());
-            $(this).prev().show();
-        });
-    });
+
+    function getCharacterOffsetWithin(range, node) {
+        var treeWalker = document.createTreeWalker(
+            node,
+            NodeFilter.SHOW_TEXT,
+            function(node) {
+                var nodeRange = document.createRange();
+                nodeRange.selectNodeContents(node);
+                return nodeRange.compareBoundaryPoints(Range.END_TO_END, range) < 1 ?
+                    NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+            },
+            false
+        );
+        var charCount = 0;
+        while (treeWalker.nextNode()) {
+            charCount += treeWalker.currentNode.length;
+        }
+        if (range.startContainer.nodeType == 3) {
+            charCount += range.startOffset;
+        }
+        return charCount;
+    }
+    document.body.addEventListener("mouseup", function() {
+        var el = document.getElementById("test");
+        var range = window.getSelection().getRangeAt(0);
+        console.log("Caret char pos: " + getCharacterOffsetWithin(range, el))
+    }, false);
 
     /*Closing Popup on ESC keypress*/
     /*

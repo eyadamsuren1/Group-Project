@@ -639,7 +639,7 @@ textarea {
 }
 .tab-content p {
 	display: inline;
-    line-height: 3.0;
+  line-height: 2.0;
 }
 .tab {
   display: none;
@@ -745,7 +745,7 @@ textarea {
   width: 60%;
 }
 .account_info p {
-	margin-left: 15px;
+	margin-right: 5px;
 }
 .vehicle_info p {
   font-weight: bold;
@@ -996,4 +996,50 @@ textarea {
 .search-box-button:focus {
   border-color: #a3a3a3;
   background-color: #a3a3a3;
+}
+/*Content Editable*/
+[contenteditable="true"]:active,
+[contenteditable="true"]:focus{
+	border:none;
+	outline:none;
+}
+[contenteditable="true"]:focus > style{
+	display:block;
+}
+[contenteditable="true"]:focus > style{
+	display:block;
+	font-size: .75em;
+	color: blue;
+	background: #fff;
+	line-height: 1.5;
+	position:relative;
+	right: -36em;
+	top:-2em;
+}
+.tag {
+  padding: 5px;
+  clear:both;
+}
+.inner {
+  float: left;
+}
+.inner-line {
+  display: table;
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  height: 20px;
+  width: 50%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f4f4f4;
+}
+.inner-line p {
+  display: table-cell;
+  vertical-align: middle;
+  margin: 0px;
+  padding: 0px;
+  font-size: 14px;
+  line-height: 2.0;
+  color: #444;
 }
