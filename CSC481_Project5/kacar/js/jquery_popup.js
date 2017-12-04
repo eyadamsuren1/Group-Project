@@ -94,6 +94,7 @@ $(document).ready(function() {
             var year = "";
             var miles = "";
             var vin = "";
+            var price = "";
 
             for (i = 0; i < obj.length; i++) {
                 var vehicleID = obj[i].vehicleid;
@@ -105,6 +106,7 @@ $(document).ready(function() {
                     year = obj[i].year;
                     miles = obj[i].miles;
                     vin = obj[i].vin;
+                    price = obj[i].price;
                 }
             }
 
@@ -113,7 +115,11 @@ $(document).ready(function() {
             	("<br><b>Model: </b>" + model)+
             	("<br><b>Year: </b>" + year)+
             	("<br><b>Miles: </b>" + miles)+
-            	("<br><b>Vin Number: </b>" + vin));
+            	("<br><b>Vin Number: </b>" + vin)+
+            	("<br><b>Price Per Day: </b>" + price + "$")+
+            	("<br><center><b>Availability</b></center>")+
+            	("<b>From: </b>")+
+            	("<br><b>To: </b>"));
         }           
     });
     // Click Activator
