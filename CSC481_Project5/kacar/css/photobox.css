@@ -197,8 +197,9 @@ table, tr, td {
 /*Google Map*/
 #map {
 	position: absolute;
-	width: 100%;
-	height: 300px;
+	margin-left: 5%;
+	width: 90%;
+	height: 35%;
 	bottom: 10%;
 	border: 1px solid black;
 }
