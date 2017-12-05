@@ -116,6 +116,36 @@
     	    </tbody>
     	</table>
     </div>
+
+    <style>
+      .booking_form_overlay{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background: rgba(0,0,0,.5);
+        left:0;
+        top:0;
+        display: none;
+      }
+      .booking_form_overlay .form_wrap{
+        width: 100%;
+        max-width: 400px;
+        background: #fff;
+        padding: 20px;
+        margin: auto;
+        margin-top: 50px;
+
+      }
+    </style>
+    <div id="booking_form" class='booking_form_overlay'>
+      <div class="form_wrap">
+        <form>
+          <h1>Form</h1>
+          <input type="text" name="">
+        </form>
+      </div>
+    </div>
+    
     <footer>
       <p>Book-A-Car ~ Copyright &copy; 2017</p>
       <p><a href="#">Your Site</a> &#124; <a href="#">Terms of Use</a> &#124; <a href="#">Privacy Policy</a> &#124; <a href="#">Help</a></p>

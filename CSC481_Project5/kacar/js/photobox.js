@@ -22,7 +22,13 @@
 			this.lazyLoadImage = new Image();
 			this.lazyLoadImage.onload = function() { $this.refreshBoxSize(this); };
 			this.pMainImage.bind("onBoxImageShow", this.settings.onImageShow);
-			
+
+			//book form will open
+			$('.photobox-book').click(function(){
+				$(".photobox-close-btn").click();
+				$("#booking_form").fadeIn();
+			});
+
 			// Prev & Next btn hover animation
 			$(".photobox-a").hover(function() {
 				$(this).fadeTo("fast", 1);
