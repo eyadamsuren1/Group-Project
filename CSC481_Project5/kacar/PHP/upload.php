@@ -12,6 +12,8 @@ class Vehicle {
 		public $year = "";
 		public $vin = "";
 		public $miles = "";
+		public $price="";
+		public $make="";
 	}
 class pic_dir{
 	public $path="";
@@ -35,13 +37,15 @@ if ($conn->connect_error) {
 }
 // Settings
 //$targetDir = ini_get("upload_tmp_dir") . DIRECTORY_SEPARATOR . "plupload";
-$stmt=$conn->prepare("INSERT INTO vehicles(ownerid,model,year,vin,miles) VALUES (?,?,?,?,?)");
-$stmt->bind_param("isssi",$ownerid,$model,$year,$vin,$miles);
+$stmt=$conn->prepare("INSERT INTO vehicles(ownerid,make,model,year,vin,miles,price) VALUES (?,?,?,?,?,?,?)");
+$stmt->bind_param("issssii",$ownerid,$make,$model,$year,$vin,$miles,$price);
 $ownerid=trim($_POST['ownerid']);
 $vin=trim($_POST['vintage']);
 $miles=trim($_POST['miles']);
 $year=trim($_POST['year']);
 $model=trim($_POST['model']);
+$make=trim($_POST['make']);
+$price=trim($_POST['price']);
 $stmt->execute();
 $last_id=$stmt->insert_id;
 /*

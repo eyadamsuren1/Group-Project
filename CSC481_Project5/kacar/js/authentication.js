@@ -229,6 +229,8 @@ function uploadVehicle(){
     var model = document.getElementById("CarModelAccount").value;
     var year = document.getElementById("CarYearAccount").value;
     var miles = document.getElementById("CarMilesAccount").value;
+    var make=document.getElementById("CarMakeAccount");
+    var price=document.getElementById("CarPriceAccount");
     var path="./../PHP/upload.php";
     if(vintage == "" || model == ""|| year == ""|| miles == "") {
         alert("Please Fill Out The Form Completely!");
@@ -241,7 +243,9 @@ function uploadVehicle(){
                 "vintage" : vintage,
                 "miles" : miles,
                 "year" : year,
-                "ownerid" : userID
+                "ownerid" : userID,
+                "make" : make,
+                "price" : price
             },
             success: function(vehicleData) {
                 if(vehicleData== 'null' || vehicleData.includes('</br>'))
