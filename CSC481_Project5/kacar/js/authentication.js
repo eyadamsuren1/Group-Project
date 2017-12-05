@@ -229,22 +229,22 @@ function uploadVehicle(){
     var model = document.getElementById("CarModelAccount").value;
     var year = document.getElementById("CarYearAccount").value;
     var miles = document.getElementById("CarMilesAccount").value;
-    var make=document.getElementById("CarMakeAccount");
-    var price=document.getElementById("CarPriceAccount");
+    var make = document.getElementById("CarMakeAccount").value;
+    var price = document.getElementById("CarPriceAccount").value;
     var path="./../PHP/upload.php";
-    if(vintage == "" || model == ""|| year == ""|| miles == "") {
+    if(vintage == "" || model == ""|| year == ""|| miles == ""||make==""||price=="") {
         alert("Please Fill Out The Form Completely!");
     } else {
         $.ajax({
             type: "POST",
             url: path,
             data: {
+                "make" : make,
                 "model" : model,
                 "vintage" : vintage,
                 "miles" : miles,
                 "year" : year,
                 "ownerid" : userID,
-                "make" : make,
                 "price" : price
             },
             success: function(vehicleData) {
