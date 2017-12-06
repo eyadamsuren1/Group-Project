@@ -3,6 +3,8 @@ function SignUp() {
 	var lname = document.getElementById("last_name").value;
 	var email = document.getElementById("email").value;
 	var password = document.getElementById("pass").value;
+	var phno = document.getElementById("phno").value;
+	var address = document.getElementById("address").value;
 
 
 	if(fname == "" || lname == "" || email == "" || password == "") {
@@ -16,6 +18,8 @@ function SignUp() {
             			"lname": lname,
 				"email" : email,
 				"password" : password,
+				"phno" : phno,
+				"address" : address,
              			"submit": true
 			},
 			success: function(userData) {
