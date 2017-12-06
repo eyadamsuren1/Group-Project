@@ -15,7 +15,7 @@ if(isset($_POST['submit'])){
             $query1 = "SELECT * FROM kacar.booked_vehicle WHERE vehicleid ='" . $'vehicleid'."' ";
 			
 			$result = $dbc->query($query1);
-			if($result->$num_rows > 0)
+			if($result->num_rows > 0)
 			{
 				echo "Vehicle is already booked";
 			} else {
