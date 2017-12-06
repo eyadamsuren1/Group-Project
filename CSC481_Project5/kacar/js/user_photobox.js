@@ -130,6 +130,7 @@
 									'<div style="clear:both"></div>',
 								'</div>',
 								'<div class="photobox-container-bottom">',
+									'<button class="photobox-book">Book</button><button class="photobox-cancel">Cancel</button>',
 									'<div style="clear:both"></div>',
 								'</div>',
 							'</div>',
