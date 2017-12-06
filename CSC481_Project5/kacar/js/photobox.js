@@ -130,6 +130,7 @@
 									'<div style="clear:both"></div>',
 								'</div>',
 								'<div class="photobox-container-bottom">',
+									'<button class="photobox-request">LOGIN TO BOOK!</button>',
 									'<div style="clear:both"></div>',
 								'</div>',
 							'</div>',
