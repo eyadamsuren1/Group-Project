@@ -94,6 +94,8 @@ function successLogin() {
     document.getElementById("firstNameAccount").innerHTML = obj.firstName;
     document.getElementById("lastNameAccount").innerHTML = obj.lastName;
     document.getElementById("emailAccount").innerHTML = obj.email;
+    document.getElementById("phoneNumberAccount").innerHTML = obj.phone_number;
+    document.getElementById("addressAccount").innerHTML = obj.address;
     loadVehicles();
     alert("Welcome " + obj.firstName);
 }
