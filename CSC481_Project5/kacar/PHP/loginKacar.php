@@ -16,6 +16,8 @@ if(isset($_POST["email"]) && isset($_POST['password'])) {
 		public $password = "";
 		public $renter_status = "";
 		public $profile_pic_dir = "";
+		public $phone_number = "";
+		public $address = "";
 		public $vehicles = array();
 	}
 	class Vehicle {
@@ -24,6 +26,7 @@ if(isset($_POST["email"]) && isset($_POST['password'])) {
 		public $year = "";
 		public $vin = "";
 		public $miles = "";
+
 	}
 
 	$user = new User();
@@ -68,6 +71,8 @@ if(isset($_POST["email"]) && isset($_POST['password'])) {
 							$user->password = $row[4];
 							$user->renter_status = $row[5];
 							$user->profile_pic_dir = $row[6];
+							$user->phone_number = $row[7];
+							$user->address = $row[8];
 							//echo $row['fname'];
 							//$myJSON = json_encode($row);
 							//echo $myJSON;

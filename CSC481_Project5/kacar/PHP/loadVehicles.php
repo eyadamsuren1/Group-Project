@@ -18,6 +18,8 @@
 		public $vin = "";
 		public $miles = "";
 		public $price = "";
+		public $date_available_start = "";
+		public $date_available_end = "";
 		public $picdir = array();
 	}
 	
@@ -72,6 +74,8 @@
 							$vehicle->vin = $row[5];
 							$vehicle->miles = $row[6];
 							$vehicle->price = $row[7];
+							$vehicle->date_available_start = $row[8];
+							$vehicle->date_available_end = $row[9];
 							//echo $row['fname'];
 							//$myJSON = json_encode($row);
 							//echo $myJSON;
