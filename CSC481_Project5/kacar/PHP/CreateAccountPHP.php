@@ -34,45 +34,43 @@
     	
         if(empty($data_missing)){
     		$servername = "localhost";
-    		$username = "root";
-    		$password = "root";
+    		$db_username = "root";
+    		$db_password = "root";
     		$database = "kacar";
 
-            $dbc = mysqli_connect($servername, $username, $password, $database);
+            $dbc = mysqli_connect($servername, $db_username, $db_password, $database);
 
             // Check connection
             if (mysqli_connect_errno()) {
                 echo "Failed to connect to MySQL: " . mysqli_connect_error();
             }
             echo "Connected successfully";
-            
-            $query1 = "SELECT * FROM Kacar.user WHERE email ='" . $_POST['email']."' ";
-		$result = $dbc->query($query1);	
-			if($result->$num_rows > 0)
+           
+            $query1 = "SELECT * FROM kacar.user WHERE email ='" . $_POST['email'] . "' ";
+			$result = $dbc->query($query1);
+			echo "query 1";
+			
+			if($result->num_rows > 0)
 			{
 				echo "User Already Exists";
-				break;
-			}
-			else
-			{
-				$query2 = "INSERT INTO kacar.user (fname, lname, email, password, renter_status,  profile_pic_dir) VALUES ('".$fname."','".$lname."', '".$email."', '".$password."', '', '')";
+			} else {
+				$query2 = "INSERT INTO kacar.user (fname, lname, email, password, renter_status) VALUES ('".$fname."','".$lname."', '".$email."', '".$password."', '')";
+				//('" . $_POST["firstName"] . "', '" . $_POST["lastName"] . "', '" . $_POST["email"] . "', '" . $_POST["password"] . "', '')";
 				if($dbc->query($query2) === TRUE) {
 						echo 'New User Created';
-				
 				}
 				else {
-                echo 'Error Occurred<br />';
-                echo mysqli_error();
+	                echo 'Error Occurred<br />';
+	                echo mysqli_error();
 				}
-				$result->free();
 			}
-
         } else {
             echo 'You need to enter the following data<br />';
             foreach($data_missing as $missing) {
                 echo "$missing<br />";
             }
         }
+
         mysqli_close($dbc);
     }
 ?>
