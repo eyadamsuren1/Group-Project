@@ -117,7 +117,7 @@ $(document).ready(function() {
             	("<br><b>Year: </b>" + year)+
             	("<br><b>Miles: </b>" + miles)+
             	("<br><b>Vin Number: </b>" + vin)+
-            	("<br><b>Price Per Day: </b>" + price + "$")+
+            	("<br><b>Price Per Day: </b>"+"$" + price )+
             	("<br><center><b>Availability</b></center>")+
             	("<b>From: </b>")+
             	("<br><b>To: </b>"));
