@@ -9,6 +9,7 @@ $(document).ready(function() {
     $('#error').show(1).delay(3000).hide(1);
     /*
     $("#sign_button").click(function() {
+        $("#signupdiv").hide(500);
         var first_name = $("#first_name").val();
         var last_name = $("#last_name").val();
         var email_address = $("#email_address").val();
@@ -31,7 +32,8 @@ $(document).ready(function() {
             }
         }
     });
-    */
+	*/
+    
     $("#log_in").click(function() {
         $("#logindiv").css("display", "block");
     });
@@ -71,6 +73,10 @@ $(document).ready(function() {
     $("#accountdiv .close_button").click(function() {
 		$("#accountdiv").hide();
 		return false;
+    });
+    $("#booking_form .close_button").click(function() {
+        $("#booking_form").hide();
+        return false;
     });
     $(".photobox img").PhotoBox({
         rightWidth: 360,
