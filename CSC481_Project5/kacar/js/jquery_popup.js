@@ -74,6 +74,10 @@ $(document).ready(function() {
 		$("#accountdiv").hide();
 		return false;
     });
+    $("#booking_form .close_button").click(function() {
+        $("#booking_form").hide();
+        return false;
+    });
     $(".photobox img").PhotoBox({
         rightWidth: 360,
         leftBgColor: "black",
