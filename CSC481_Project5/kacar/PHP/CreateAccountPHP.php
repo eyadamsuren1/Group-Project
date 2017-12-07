@@ -31,9 +31,9 @@
             // Trim white space from the name and store the name
             $password = trim($_POST['password']);
     	}
-		$phno = trim($_POST['phno']);
-		$address = trim($_POST['address']);
-		/*
+//		$phno = trim($_POST['phno']);
+//		$address = trim($_POST['address']);
+		
 		 if(empty($_POST['phno'])){
             // Adds name to array
             $data_missing[] = 'phno';
@@ -47,7 +47,7 @@
             // Trim white space from the name and store the name
             $address = trim($_POST['address']);
     	}
-    	*/
+    	
         if(empty($data_missing)){
     		$servername = "localhost";
     		$db_username = "root";
@@ -70,7 +70,7 @@
 			{
 				echo "User Already Exists";
 			} else {
-				$query2 = "INSERT INTO kacar.user (fname, lname, email, password, renter_status, profile_pic_dir, phone_number, address) VALUES ('".$fname."','".$lname."', '".$email."', '".$password."', '','','".$phno."''".$address."')";
+				$query2 = "INSERT INTO kacar.user (fname, lname, email, password, renter_status, phone_number, address) VALUES ('".$fname."','".$lname."', '".$email."', '".$password."', '','".$phno."','".$address."')";
 				//('" . $_POST["firstName"] . "', '" . $_POST["lastName"] . "', '" . $_POST["email"] . "', '" . $_POST["password"] . "', '')";
 				if($dbc->query($query2) === TRUE) {
 						echo 'New User Created';
