@@ -31,6 +31,8 @@ CREATE TABLE `Vehicles` (
   `vin` varchar(45) NOT NULL,
   `miles` int(11) NOT NULL,
   `price` int(11) NOT NULL,
+  `data_available_start` date DEFAULT NULL,
+  `data_available_end` date DEFAULT NULL,
   PRIMARY KEY (`vehicleid`),
   UNIQUE KEY `vin_UNIQUE` (`vin`),
   KEY `ownerid_idx` (`ownerid`),

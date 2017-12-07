@@ -8,12 +8,14 @@ header("Pragma: no-cache");
 
 class Vehicle {
 		public $ownerid = "";
+		public $make = "";
 		public $model = "";
 		public $year = "";
 		public $vin = "";
 		public $miles = "";
-		public $price="";
-		public $make="";
+		public $price = "";
+		public $startDate = "";
+		public $endDate = "";
 	}
 class pic_dir{
 	public $path="";
@@ -37,15 +39,21 @@ if ($conn->connect_error) {
 }
 // Settings
 //$targetDir = ini_get("upload_tmp_dir") . DIRECTORY_SEPARATOR . "plupload";
-$stmt=$conn->prepare("INSERT INTO vehicles(ownerid,make,model,year,vin,miles,price) VALUES (?,?,?,?,?,?,?)");
-$stmt->bind_param("issssii",$ownerid,$make,$model,$year,$vin,$miles,$price);
+$stmt=$conn->prepare("INSERT INTO vehicles(ownerid,make,model,year,vin,miles,price,date_available_start,date_available_end) VALUES (?,?,?,?,?,?,?,?,?)");
+$stmt->bind_param("issssiiss",$ownerid,$make,$model,$year,$vin,$miles,$price,$startDate,$endDate);
 $ownerid=trim($_POST['ownerid']);
+$make=trim($_POST['make']);
 $vin=trim($_POST['vintage']);
 $miles=trim($_POST['miles']);
 $year=trim($_POST['year']);
 $model=trim($_POST['model']);
-$make=trim($_POST['make']);
 $price=trim($_POST['price']);
+$startDate=trim($_POST['startDate']);
+
+echo $startDate;
+$endDate=trim($_POST['endDate']);
+
+echo $endDate;
 $stmt->execute();
 $last_id=$stmt->insert_id;
 /*

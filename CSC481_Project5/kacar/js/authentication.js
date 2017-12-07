@@ -254,7 +254,9 @@ function uploadVehicle(){
                 "miles" : miles,
                 "year" : year,
                 "ownerid" : userID,
-                "price" : price
+                "price" : price,
+                "startDate" : startDate,
+                "endDate" : endDate
             },
             success: function(vehicleData) {
                 if(vehicleData== 'null' || vehicleData.includes('</br>'))
