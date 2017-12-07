@@ -3,6 +3,8 @@ function SignUp() {
 	var lname = document.getElementById("last_name").value;
 	var email = document.getElementById("email").value;
 	var password = document.getElementById("pass").value;
+	var phno = document.getElementById("phno").value;
+	var address = document.getElementById("address").value;
 
 
 	if(fname == "" || lname == "" || email == "" || password == "") {
@@ -16,6 +18,8 @@ function SignUp() {
             			"lname": lname,
 				"email" : email,
 				"password" : password,
+				"phno" : phno,
+				"address" : address,
              			"submit": true
 			},
 			success: function(userData) {
@@ -23,11 +27,12 @@ function SignUp() {
                 {
                     alert("Your Email or Password is incorrect. Try Again!");
                 } else {
-                    alert("Success");
+                    alert("Successfully Created Account. Login on Main Page");
 	//	    alert(userData);
-                    console.log(userData);
-                    setCookie("userData", userData);
-                    window.location.href = "http://127.0.0.1/BookACar/user/user_index.html";
+                    //console.log(userData);
+      //              setCookie("userData", userData);
+                    
+                    window.location.href = "http://127.0.0.1/BookACar/index.html";
                     //delete_cookie("userData");
                     //console.log(getCookie("userData"));
                 }
@@ -94,6 +99,8 @@ function successLogin() {
     document.getElementById("firstNameAccount").innerHTML = obj.firstName;
     document.getElementById("lastNameAccount").innerHTML = obj.lastName;
     document.getElementById("emailAccount").innerHTML = obj.email;
+    document.getElementById("phoneNumberAccount").innerHTML = obj.phone_number;
+    document.getElementById("addressAccount").innerHTML = obj.address;
     loadVehicles();
     alert("Welcome " + obj.firstName);
 }
