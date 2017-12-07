@@ -27,12 +27,11 @@ function SignUp() {
                 {
                     alert("Your Email or Password is incorrect. Try Again!");
                 } else {
-                    alert("Successfully Created Account. Login on Main Page");
-	//	    alert(userData);
-                    //console.log(userData);
-      //              setCookie("userData", userData);
-                    
-                    window.location.href = "http://127.0.0.1/BookACar/index.html";
+                    alert("Success");
+		    alert(userData);
+                    console.log(userData);
+                    setCookie("userData", userData);
+                    window.location.href = "http://127.0.0.1/BookACar/user/user_index.html";
                     //delete_cookie("userData");
                     //console.log(getCookie("userData"));
                 }
