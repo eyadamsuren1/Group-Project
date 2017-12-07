@@ -231,6 +231,8 @@ function uploadVehicle(){
     var miles = document.getElementById("CarMilesAccount").value;
     var make = document.getElementById("CarMakeAccount").value;
     var price = document.getElementById("CarPriceAccount").value;
+    var startDate=document.getElementById("CarFromDateAccount").value;
+    var endDate=document.getElementById("CarToDateAccount").value;
     var path="./../PHP/upload.php";
     if(vintage == "" || model == ""|| year == ""|| miles == ""||make==""||price=="") {
         alert("Please Fill Out The Form Completely!");
