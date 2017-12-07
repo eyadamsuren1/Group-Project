@@ -30,6 +30,8 @@ CREATE TABLE `user` (
   `password` varchar(45) NOT NULL,
   `renter_status` varchar(45) NOT NULL,
   `profile_pic_dir` varchar(45) DEFAULT NULL,
+  `phone_number` varchar(12) NOT NULL,
+  `address` varchar(45) NOT NULL
   PRIMARY KEY (`userid`),
   UNIQUE KEY `userid_UNIQUE` (`userid`),
   UNIQUE KEY `email_UNIQUE` (`email`)
