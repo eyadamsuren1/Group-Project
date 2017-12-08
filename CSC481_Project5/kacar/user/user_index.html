@@ -180,6 +180,7 @@
     }
     .booking_form_overlay .form_wrap {
       width: 80%;
+      position: relative;
       height: 400px;
       margin: 0px;
       padding: 10px;
@@ -190,17 +191,34 @@
       top: 50%;
       transform: translate(-50%, -50%);
     }
+    .display_now_div {
+      width: 50%;
+      position: absolute;
+    }
+    .book_now_div {
+      width: 50%;
+      position: absolute;
+    }
     </style>
     <div id="booking_form" class='booking_form_overlay'>
       <div class="form_wrap">
         <h1>Booking Form</h1>
-        <div class="availability_div">
-          <h4>Availability</h4>
-          <p>From: &nbsp;</p><input type="date" id="CarFromDateAccount"><br>
-          <p>To: &nbsp;</p><input type="date" id="CarToDateAccount"><br>
+
+        <div class="display_now_div">
+          <p>make</p><p>model</p>
+          <p>From: &nbsp;</p><p id="CarFromDateAccount"></p>
+          <p>To: &nbsp;</p><p id="CarToDateAccount"></p>
+          <p>Price</p>
         </div>
-        <button class='close_button'>Close</button>
-        <button class='panel_1_button'>Pay With Paypal</button>
+        <div>
+          <div class="book_now_div">
+            <h4>Book Now!</h4>
+            <p>From: &nbsp;</p><input type="date" id="UserFromDateAccount"><br>
+            <p>To: &nbsp;</p><input type="date" id="UserToDateAccount"><br>
+          </div>
+          <button class='close_button'>Cancel</button>
+          <button class='panel_1_button'>Pay With Paypal</button>
+        </div>
       </div>
     </div>
     <footer>

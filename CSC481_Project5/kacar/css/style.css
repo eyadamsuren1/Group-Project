@@ -904,8 +904,8 @@ textarea {
 #profile-container {
   position: relative;
   margin: 0 auto;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   width: 150px;
   height: 150px;
   overflow: hidden;
