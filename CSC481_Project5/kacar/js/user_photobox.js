@@ -26,6 +26,7 @@
 			//book form will open
 			$('.photobox-book').click(function(){
 				$(".photobox-close-btn").click();
+				alert("ID CLICKED IS : " + idClicked);
 				$("#booking_form").fadeIn();
 			});
 

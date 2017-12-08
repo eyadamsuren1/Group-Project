@@ -91,6 +91,7 @@ $(document).ready(function() {
             var path = $(this).attr("src");
             //alert(paths);
             var id = path.split("/")[5];
+            idClicked = id;
             var json = getCookie("vehicleData");    //string JSON
             //alert(json);
             obj = JSON.parse(json);     //Array of unique Vehicles
@@ -110,13 +111,17 @@ $(document).ready(function() {
                 if(vehicleID == id)
                 {
                     make = obj[i].make;
+                    makeClicked = make;
                     model = obj[i].model;
+                    modelClicked = model;
                     year = obj[i].year;
                     miles = obj[i].miles;
                     vin = obj[i].vin;
                     price = obj[i].price;
                     availableStart = obj[i].date_available_start;
+                    startClicked = availableStart;
                     availableEnd = obj[i].date_available_end;
+                    endClicked = availableEnd;
                 }
             }
 

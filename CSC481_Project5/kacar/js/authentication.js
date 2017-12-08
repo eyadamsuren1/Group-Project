@@ -1,3 +1,10 @@
+var idClicked = "";
+var makeClicked = "";
+var modelClicked = "";
+var priceClicked = "";
+var startClicked = "";
+var endClicked = "";
+
 function SignUp() {
     var fname = document.getElementById("first_name").value;
 	var lname = document.getElementById("last_name").value;
