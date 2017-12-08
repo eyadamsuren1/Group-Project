@@ -57,6 +57,17 @@ function successSignUp() {
     alert("Welcome " + obj.firstName);
 }
 
+function calendar()
+{
+    var start = document.getElementById("UserFromDateAccount").value.split("-");
+    var end = document.getElementById("UserToDateAccount").value.split("-");
+
+    var difference = (parseInt(end[2]) - parseInt(start[2])) * parseInt(priceClicked);
+
+    document.getElementById("totalPrice").innerHTML = "$" + difference; 
+
+}
+
 function login() {
     var email = document.getElementById("email_address").value;
 	var password = document.getElementById("password").value;

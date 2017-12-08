@@ -26,7 +26,6 @@
 			//book form will open
 			$('.photobox-book').click(function(){
 				$(".photobox-close-btn").click();
-				alert("ID CLICKED IS : " + idClicked);
 				document.getElementById("makeClicked").innerHTML = makeClicked;
 				document.getElementById("modelClicked").innerHTML = modelClicked;
 				document.getElementById("fromClicked").innerHTML = startClicked;
