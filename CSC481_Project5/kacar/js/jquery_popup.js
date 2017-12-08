@@ -118,6 +118,7 @@ $(document).ready(function() {
                     miles = obj[i].miles;
                     vin = obj[i].vin;
                     price = obj[i].price;
+                    priceClicked = price;
                     availableStart = obj[i].date_available_start;
                     startClicked = availableStart;
                     availableEnd = obj[i].date_available_end;
