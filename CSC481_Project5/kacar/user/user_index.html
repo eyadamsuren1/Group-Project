@@ -179,11 +179,10 @@
       z-index: 9999;
     }
     .booking_form_overlay .form_wrap {
-      width: 80%;
-      position: relative;
-      height: 400px;
+      width: 60%;
+      height: 350px;
       margin: 0px;
-      padding: 10px;
+      padding: 0px;
       background-color: white;
       border-radius: 3px;
       position: relative;
@@ -191,33 +190,92 @@
       top: 50%;
       transform: translate(-50%, -50%);
     }
-    .display_now_div {
+    .display_now1_div {
+      float: left;
       width: 50%;
-      position: absolute;
+      height: 100%;
+    }
+    .display_now2_div {
+      float: right;
+      width: 50%;
+      height: 100%;
     }
     .book_now_div {
-      width: 50%;
-      position: absolute;
+      text-align: center;
+      width: 70%;
+      border-radius: 3px;
+      border: 1px dashed black;
+      background: #ededed;
+
+      padding: 10px 20px 10px 20px;
+      margin: 0px 0px 10px 0px;
+    }
+    .book_now_div h4 {
+      font-size: 15px;
+      margin: 0px;
+    }
+    .book_now_div p {
+      font-weight: bold;
+      font-size: 14px;
+      display: inline-block;
+      width: 45px;
+      text-align: right;
+      margin: 0px;
+    }
+    .form_wrap h1 {
+      text-align: center;
+      margin: 0px;
+    }
+    .pay_with_button {
+      float: right;
+      background-color: #bcbcbc;
+      border: 1px solid #444444;
+      border-radius: 3px;
+      font-weight: bold;
+      font-size: 14px;
+      width: 100px;
+    }
+    .pay_with_button:hover {
+      background: #08ff00;
+    }
+    .close_button {
+      margin-left: 5px;
+      float: right;
+      background-color: #bcbcbc;
+      border: 1px solid #444444;
+      border-radius: 3px;
+      font-weight: bold;
+      font-size: 14px;
+      width: 100px;
+    }
+    .close_button:hover {
+      background: #ff0000;
+    }
+    .pay_with_button, .close_button {
+      bottom: 10px;
+      margin-top: 10px;
+      margin-bottom: 15px;
     }
     </style>
     <div id="booking_form" class='booking_form_overlay'>
       <div class="form_wrap">
         <h1>Booking Form</h1>
 
-        <div class="display_now_div">
-          <p>make</p><p>model</p>
+        <div class="display_now1_div">
+          <p>make</p>
+          <p>model</p>
           <p>From: &nbsp;</p><p id="CarFromDateAccount"></p>
           <p>To: &nbsp;</p><p id="CarToDateAccount"></p>
           <p>Price</p>
         </div>
-        <div>
+        <div class="display_now2_div">
           <div class="book_now_div">
             <h4>Book Now!</h4>
             <p>From: &nbsp;</p><input type="date" id="UserFromDateAccount"><br>
             <p>To: &nbsp;</p><input type="date" id="UserToDateAccount"><br>
           </div>
           <button class='close_button'>Cancel</button>
-          <button class='panel_1_button'>Pay With Paypal</button>
+          <button class='pay_with_button'>Pay With Paypal</button>
         </div>
       </div>
     </div>
