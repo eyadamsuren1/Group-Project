@@ -289,8 +289,10 @@
         <div class="display_now2_div">
           <div class="book_now_div">
             <h4>Book Now!</h4>
+            <p id="totalPrice"></p>
             <p>From: </p><input type="date" id="UserFromDateAccount"><br>
             <p>To: </p><input type="date" id="UserToDateAccount"><br>
+            <button onclick="calendar()">Calculate</button>
           </div>
           <button class='close_book_button'>Cancel</button>
           <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
