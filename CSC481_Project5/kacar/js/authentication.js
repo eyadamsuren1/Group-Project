@@ -57,6 +57,57 @@ function successSignUp() {
     alert("Welcome " + obj.firstName);
 }
 
+function BookACar() {
+//	var path = $(this).attr("src");
+//	var id = path.split("/")[5];
+
+	var json = getCookie("vehicleData");
+	obj = JSON.parse(json);
+	console.log(json);
+    var json1 = getCookie("userData");
+    obj1 = JSON.parse(json1);
+	 console.log(json1);
+    var renterid = obj1.userid;
+//renterid=9;	
+//	var vehicleid = obj.vehicleid;
+  //  var vehicleid = document.getElementById("CarVehicleIdAccount").value;
+  var vehicleid = idClicked;
+//  vehicleid=1;
+  
+  alert("The renterid is: "+renterid);
+alert("The vehicleid is:" +vehicleid);
+//	 alert("Book The Car Out");
+        $.ajax({
+			type: "POST",
+			url: "./PHP/BookACarPHP.php",
+			data: {
+				"renterid": renterid,
+            	"vehicleid": vehicleid,
+				"submit": true
+			},
+			success: function(userData) {
+ //                   alert("Book The Car Success");
+		    alert(userData);
+                    window.location.href = "http://127.0.0.1/BookACar/user/user_index.html";
+                    //delete_cookie("userData");
+                    //console.log(getCookie("userData"));
+                }
+			
+		});
+	
+}
+
+function successBookACar() {
+    
+    var json = getCookie("userData");
+    console.log(json);
+    obj = JSON.parse(json);
+    document.getElementById("firstNameAccount").innerHTML = obj.firstName;
+    document.getElementById("lastNameAccount").innerHTML = obj.lastName;
+    document.getElementById("emailAccount").innerHTML = obj.email;
+    alert("Your Car is booked " + obj.firstName);
+}
+
 function calendar()
 {
     var start = document.getElementById("UserFromDateAccount").value.split("-");
