@@ -47,7 +47,7 @@ function SignUp() {
 	}
 }
 function successSignUp() {
-    
+
     var json = getCookie("userData");
     console.log(json);
     obj = JSON.parse(json);
@@ -56,16 +56,14 @@ function successSignUp() {
     document.getElementById("emailAccount").innerHTML = obj.email;
     alert("Welcome " + obj.firstName);
 }
-
-function calendar()
-{
+function calendar() {
     var start = document.getElementById("UserFromDateAccount").value.split("-");
     var end = document.getElementById("UserToDateAccount").value.split("-");
 
-    var difference = (parseInt(end[2]) - parseInt(start[2])) * parseInt(priceClicked);
-
-    document.getElementById("totalPrice").innerHTML = "$" + difference; 
-
+    var difference = (parseInt(end[2]) - parseInt(start[2]));
+    var total = difference * parseInt(priceClicked);
+    document.getElementById("totalDays").innerHTML = difference;
+    document.getElementById("totalPrice").innerHTML = "$" + total;
 }
 
 function login() {
@@ -82,7 +80,7 @@ function login() {
     if(password == "") {
         document.getElementById('error').innerHTML+="<p>Password is required!</p>";
         return false;
-    } 
+    }
     */
     else {
         $.ajax({
@@ -109,7 +107,7 @@ function login() {
 	}
 }
 function successLogin() {
-    
+
     var json = getCookie("userData");
     console.log(json);
     obj = JSON.parse(json);
@@ -152,14 +150,14 @@ function checkCookie() {
     if (username != "") {
         alert("Welcome again " + username);
     } else {
-        
+
     }
 }
 
 function loadVehicles(param) {
     //var email = document.getElementById("email_address").value;
     //var password = document.getElementById("password").value;
-    
+
     var path = "";
 
     if(param == 'unlogged') {
@@ -170,7 +168,7 @@ function loadVehicles(param) {
 
         $.ajax({
 			type: "POST",
-			url: path, 
+			url: path,
 			data: {
 				//"email" : email,
 				//"password" : password
@@ -189,7 +187,7 @@ function loadVehicles(param) {
                 }
 			}
         });
-        
+
         var json = getCookie("vehicleData");    //string JSON
         //alert(json);
         obj = JSON.parse(json);     //Array of unique Vehicles
@@ -197,8 +195,8 @@ function loadVehicles(param) {
         //document.getElementById("photo1").src = "./img/1/mustang1.png";
         var i;
         for (i = 0; i < obj.length; i++) {
-            var temp = obj[i].picdir; 
-            
+            var temp = obj[i].picdir;
+
             var id = "box_" + (i+1);
             var currentElement = document.getElementById(id);
             currentElement.style.display = "block";
@@ -207,7 +205,7 @@ function loadVehicles(param) {
             {
                 var img = document.createElement("img");
                 img.setAttribute("class", "photo");
-                
+
                 if(document.getElementById("unlogged"))
                 {
                     img.setAttribute("photoboxsrc", temp[j]);
@@ -216,14 +214,14 @@ function loadVehicles(param) {
                     img.setAttribute("photoboxsrc", "./." + temp[j]);
                     img.setAttribute("src", "./." + temp[j]);
                 }
-                
+
                 if(j == 0)
                 {
                     //img.setAttribute("style", "display:block");
                 }else{
                     img.setAttribute("style", "display:none");
                 }
-                
+
                 currentElement.appendChild(img);
             }
             var div = document.createElement("div");
