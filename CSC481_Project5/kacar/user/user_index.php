@@ -297,21 +297,21 @@
         <div class="display_now2_div">
           <div class="book_now_div">
             <h4>Book Now!</h4>
-            <p>From: </p><input type="date" id="UserFromDateAccount"><br>
-            <p>To: </p><input type="date" id="UserToDateAccount"><br>
+            <p>From: </p><input type="date" id="UserFromDateAccount" class="datepicker"><br>
+            <p>To: </p><input type="date" id="UserToDateAccount" class="datepicker"><br>
             <div class="check_out">
               <hr>
               <b><p>Total Days: </p></b><p id="totalDays"></p><br>
               <b><p>Total Price: </p></b><p id="totalPrice"></p><br>
               <button onclick="calendar()">Calculate</button>
+              <input type="button" id="book_button" value="book" onclick="BookACar()">
             </div>
           </div>
-
           <button class='close_book_button'>Cancel</button>
           <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
             <input type="hidden" name="cmd" value="_s-xclick">
             <input type="hidden" name="hosted_button_id" value="ZPJF4UA8DESYG">
-            <input type="image" class="pay_with_button" onclick="BookACar() src="http://www.dermitech.com/image/PayPal-PayNow-Button.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <input type="image" class="pay_with_button" src="http://www.dermitech.com/image/PayPal-PayNow-Button.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
           </form>
         </div>
       </div>
@@ -321,9 +321,43 @@
       <p><a href="#">Your Site</a> &#124; <a href="#">Terms of Use</a> &#124; <a href="#">Privacy Policy</a> &#124; <a href="#">Help</a></p>
     </footer>
     <script>
+      // Call geocode
+      geocode();
+
+      var latitude = "";
+      var longitude = "";
+      function geocode(){
+        var location = "1325 4th Ave, Los Angeles, CA 90019";
+        axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
+          params:{
+            address:location,
+            key:'AIzaSyD4lf3dLDOuqsvBEreeQsOchv6XqtX_3t4'
+          }
+        })
+        .then(function(response){
+          // Geometry
+          latitude = response.data.results[0].geometry.location.lat;
+          longitude = response.data.results[0].geometry.location.lng;
+          console.log(latitude);
+          console.log(longitude);
+          /*
+          var geometryOutput = `
+            <ul class="list-group">
+              <li class="list-group-item"><strong>Latitude</strong>: ${latitude}</li>
+              <li class="list-group-item"><strong>Longitude</strong>: ${longitude}</li>
+            </ul>
+          `;
+          document.getElementById('geometry').innerHTML = geometryOutput;
+          */
+        })
+        .catch(function(error){
+          console.log(error);
+        });
+      }
       function initMap() {
         var options = {
           zoom:13,
+          //center: {lat: latitude, lng: longitude}
           center: {lat: 37.090, lng: -95.712}
         }
         // Create the map.
@@ -332,6 +366,34 @@
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4lf3dLDOuqsvBEreeQsOchv6XqtX_3t4&callback=initMap">
+    </script>
+
+
+    <!--Search Filter button function-->
+    <script>
+    $(document).ready(function(){
+     $.ajaxSetup({ cache: false });
+     $('.search-box-input').keyup(function(){
+      $('#result').html('');
+      $('#state').val('');
+      var searchField = $('.search-box-input').val();
+      var expression = new RegExp(searchField, "i");
+      $.getJSON('data.json', function(data) {
+       $.each(data, function(key, value){
+        if (value.name.search(expression) != -1 || value.location.search(expression) != -1)
+        {
+         $('#result').append('<li class="list-group-item link-class"><img src="'+value.image+'" height="40" width="40" class="img-thumbnail" /> '+value.name+' | <span class="text-muted">'+value.location+'</span></li>');
+        }
+       });
+      });
+     });
+
+     $('#result').on('click', 'li', function() {
+      var click_text = $(this).text().split('|');
+      $('.search-box-input').val($.trim(click_text[0]));
+      $("#result").html('');
+     });
+    });
     </script>
   </body>
 </html>

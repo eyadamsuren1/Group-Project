@@ -6,54 +6,54 @@ var startClicked = "";
 var endClicked = "";
 
 function SignUp() {
-    var fname = document.getElementById("first_name").value;
+  var fname = document.getElementById("first_name").value;
 	var lname = document.getElementById("last_name").value;
 	var email = document.getElementById("email").value;
 	var password = document.getElementById("pass").value;
 	var phno = document.getElementById("phno").value;
 	var address = document.getElementById("address").value;
 
-
 	if(fname == "" || lname == "" || email == "" || password == "") {
         alert("Please Fill Out The Form Completely!");
 	} else {
-        $.ajax({
+    $.ajax({
 			type: "POST",
 			url: "./PHP/CreateAccountPHP.php",
 			data: {
-				"fname": fname,
-            			"lname": lname,
-				"email" : email,
-				"password" : password,
-				"phno" : phno,
-				"address" : address,
-             			"submit": true
+        "fname": fname,
+        "lname": lname,
+        "email" : email,
+        "password" : password,
+        "phno" : phno,
+        "address" : address,
+        "submit": true
 			},
 			success: function(userData) {
-                if(userData === '')
-                {
-                    alert("Your Email or Password is incorrect. Try Again!");
-                } else {
-                    alert("Success");
-		    alert(userData);
-                    console.log(userData);
-                    setCookie("userData", userData);
-                    window.location.href = "http://127.0.0.1/BookACar/user/user_index.html";
-                    //delete_cookie("userData");
-                    //console.log(getCookie("userData"));
-                }
+          if(userData === '') {
+              alert("Your Email or Password is incorrect. Try Again!");
+          } else {
+              alert("Success");
+              alert(userData);
+              console.log(userData);
+              setCookie("userData", userData);
+              window.location.href = "http://127.0.0.1/BookACar/user/user_index.php";
+              //delete_cookie("userData");
+              //console.log(getCookie("userData"));
+          }
 			}
 		});
 	}
 }
 function successSignUp() {
-
     var json = getCookie("userData");
     console.log(json);
     obj = JSON.parse(json);
     document.getElementById("firstNameAccount").innerHTML = obj.firstName;
     document.getElementById("lastNameAccount").innerHTML = obj.lastName;
     document.getElementById("emailAccount").innerHTML = obj.email;
+    document.getElementById("phoneNumberAccount").innerHTML = obj.phone_number;
+    document.getElementById("addressAccount").innerHTML = obj.address;
+    loadVehicles();
     alert("Welcome " + obj.firstName);
 }
 function BookACar() {
@@ -67,12 +67,12 @@ function BookACar() {
     obj1 = JSON.parse(json1);
 	 console.log(json1);
     var renterid = obj1.userid;
-//renterid=9;	
+//renterid=9;
 //	var vehicleid = obj.vehicleid;
   //  var vehicleid = document.getElementById("CarVehicleIdAccount").value;
   var vehicleid = idClicked;
 //  vehicleid=1;
-  
+
   alert("The renterid is: "+renterid);
 alert("The vehicleid is:" +vehicleid);
 //	 alert("Book The Car Out");
@@ -87,28 +87,27 @@ alert("The vehicleid is:" +vehicleid);
 			success: function(userData) {
  //                   alert("Book The Car Success");
 		    alert(userData);
-                    window.location.href = "http://127.0.0.1/BookACar/user/user_index.html";
+                    window.location.href = "http://127.0.0.1/BookACar/user/user_index.php";
                     //delete_cookie("userData");
                     //console.log(getCookie("userData"));
                 }
-			
 		});
-	
 }
 
 function successBookACar() {
-    
     var json = getCookie("userData");
     console.log(json);
     obj = JSON.parse(json);
     document.getElementById("firstNameAccount").innerHTML = obj.firstName;
     document.getElementById("lastNameAccount").innerHTML = obj.lastName;
     document.getElementById("emailAccount").innerHTML = obj.email;
+    document.getElementById("phoneNumberAccount").innerHTML = obj.phone_number;
+    document.getElementById("addressAccount").innerHTML = obj.address;
+    loadVehicles();
     alert("Your Car is booked " + obj.firstName);
 }
 
-function calendar()
-{
+function calendar() {
     var start = document.getElementById("UserFromDateAccount").value.split("-");
     var end = document.getElementById("UserToDateAccount").value.split("-");
 
@@ -120,7 +119,7 @@ function calendar()
 
 function login() {
     var email = document.getElementById("email_address").value;
-	var password = document.getElementById("password").value;
+  	var password = document.getElementById("password").value;
     if(email == "" || password == "") {
         alert("Please Fill Out The Form Completely!");
     }
@@ -150,7 +149,7 @@ function login() {
                     alert("Success");
                     console.log(userData);
                     setCookie("userData", userData);
-                    window.location.href = "http://127.0.0.1/BookACar/user/user_index.html";
+                    window.location.href = "http://127.0.0.1/BookACar/user/user_index.php";
                     //delete_cookie("userData");
                     //console.log(getCookie("userData"));
                 }
@@ -159,7 +158,6 @@ function login() {
 	}
 }
 function successLogin() {
-
     var json = getCookie("userData");
     console.log(json);
     obj = JSON.parse(json);
@@ -177,7 +175,7 @@ function signOut() {
     alert("Goodbye " + obj.firstName);
     delete_cookie("userData");
     delete_cookie("vehicleData");
-    window.location.href = "http://127.0.0.1/BookACar/index.html";
+    window.location.href = "http://127.0.0.1/BookACar/index.php";
 }
 function setCookie(cname, cvalue) {
     document.cookie = cname + "=" + cvalue + ";";
@@ -233,7 +231,7 @@ function loadVehicles(param) {
                     alert("Success");
                     console.log(vehicleData);
                     setCookie("vehicleData", vehicleData);
-                    //window.location.href = "http://127.0.0.1/BookACar/user/user_index.html";
+                    //window.location.href = "http://127.0.0.1/BookACar/user/user_index.php";
                     //delete_cookie("userData");
                     //console.log(getCookie("userData"));
                 }
@@ -333,7 +331,7 @@ function uploadVehicle(){
                     alert("Success");
                     console.log(vehicleData);
                     setCookie("vehicleData", vehicleData);
-                    //window.location.href = "http://127.0.0.1/BookACar/user/user_index.html";
+                    //window.location.href = "http://127.0.0.1/BookACar/user/user_index.php";
                     //delete_cookie("userData");
                     //console.log(getCookie("userData"));
                 }

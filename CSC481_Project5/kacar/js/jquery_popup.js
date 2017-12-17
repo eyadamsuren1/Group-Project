@@ -1,5 +1,61 @@
-$(document).ready(function() {
+/**
+ * Default ajax request maker for GET/POST
+ * @param url String (Optional. Default: current url)
+ * @param type String (Optional. Default: GET)
+ * @param data Object (Optional. Default: {})
+ * @param dataType String (Optional. Default: json)
+ * @param successFunction Function
+ * @param errorFunction Function (Optional. Default: alert)
+ */
+function sendAjaxRequest(url, type, data, dataType, successFunction, errorFunction) {
+    if (url === null) {
+        url = '';
+    }
 
+    if (type === null) {
+        type = 'GET';
+    }
+
+    if (data === null) {
+        data = {};
+    }
+
+    if (dataType === null) {
+        dataType = 'json';
+    }
+
+    if (errorFunction === null) {
+        errorFunction = function (xhr) {
+            alert("Oops something seems wrong");
+
+            if (typeof grecaptcha !== 'undefined') {
+                // reset the captcha after use
+                grecaptcha.reset();
+            }
+        };
+    }
+    $.ajax({
+        url: url,
+        type: type,
+        data: data,
+        dataType: dataType,
+        success: successFunction,
+        error: errorFunction
+    })
+}
+
+$(document).ready(function() {
+    /*
+    var oneDay = 24*60*60*1000;
+    var firstDate = parseDate('y-M-d', startClicked);
+    var secondDate = parseDate('y-M-d', endClicked);
+    var diffDays = Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay)));
+    $(".datepicker").datepicker({
+      dateFormat: 'dd/mm/yy',
+      minDate: 1,
+      maxDate: diffDays+1
+    });
+      */
     $("#sign_up").click(function() {
         $("#signupdiv").css("display", "block");
     });
@@ -33,7 +89,7 @@ $(document).ready(function() {
         }
     });
 	*/
-    
+
     $("#log_in").click(function() {
         $("#logindiv").css("display", "block");
     });
@@ -85,9 +141,9 @@ $(document).ready(function() {
         overlayBgColor: "#222",
         containerClassName: 'photobox',
         imageClassName: 'photo',
-            
+
         onImageShow: function() {
-            
+
             var path = $(this).attr("src");
             //alert(paths);
             var id = path.split("/")[5];
@@ -137,7 +193,7 @@ $(document).ready(function() {
             	("<br><center><b>Availability</b></center>")+
             	("<b>From: </b>" + availableStart)+
             	("<br><b>To: </b>" + availableEnd));
-        }           
+        }
     });
     // Click Activator
     $('.btn-group td').click(function(){
@@ -145,28 +201,32 @@ $(document).ready(function() {
         $(this).removeClass('inactive').addClass('active');
     });
     $(".show_1").on('click', function() {
-        $("#box_1").slideDown(2000);
-        $("#box_2").slideDown(2000);
-        $("#box_3").slideDown(2000);
-        $("#box_4").slideDown(2000);
-        $("#box_5").slideDown(2000);
-        $("#box_6").slideDown(2000);
+        $("#box_1").fadeIn(2000);
+        $("#box_2").fadeIn(2000);
+        $("#box_3").fadeIn(2000);
+        $("#box_4").fadeIn(2000);
+        $("#box_5").fadeIn(2000);
+        $("#box_6").fadeIn(2000);
     });
     $(".show_2").on('click', function() {
-        $("#box_1").slideDown(2000);
-        $("#box_2").slideDown(2000);
-        $("#box_5").slideDown(2000);
-        $("#box_6").slideUp(2000);
-        $("#box_3").slideUp(2000);
-        $("#box_4").slideUp(2000);
+        $("#box_1").fadeIn(2000);
+        $("#box_2").fadeIn(2000);
+        $("#box_5").fadeIn(2000);
+        $("#box_6").fadeOut(2000);
+        $("#box_3").fadeOut(2000);
+        $("#box_4").fadeOut(2000);
     });
     $(".show_3").on('click', function() {
-        $("#box_1").slideUp(2000);
-        $("#box_2").slideUp(2000);
-        $("#box_3").slideDown(2000);
-        $("#box_4").slideDown(2000);
-        $("#box_5").slideDown(2000);
-        $("#box_6").slideDown(2000);
+      var table_body = $(".main_table > tbody");
+        $(table_body).html();
+        var url = "";
+        var data = {
+          "sort": "price"
+        };
+        function successFunction(response) {
+          $(table_body).html(response);
+        }
+        sendAjaxRequest(url, "POST", data, null, successFunction, null);
     });
 	$('.myLink').click(function () {
 	    $('html, body').animate({
@@ -295,7 +355,7 @@ $(document).ready(function() {
 
     function fasterPreview( uploader ) {
         if ( uploader.files && uploader.files[0] ){
-              $('#profileImage').attr('src', 
+              $('#profileImage').attr('src',
                  window.URL.createObjectURL(uploader.files[0]));
         }
     }
